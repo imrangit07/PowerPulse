@@ -3,13 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
+  font-family: "Poppins", sans-serif;
   background-color: var(--second-white--color);
 }
 
@@ -17,20 +17,37 @@ html {
   font-size: 62.5%;
 }
 
-/* This is for LAYOUTS */
-.container {
-  padding: 1rem 2rem .2rem 2rem;
-}
-
 /* This is for THEMES */
 :root {
   --main-color: #4b31ec;
   --second-main--color: rgb(190, 116, 201);
+  --third-main--color: rgb(48, 191, 163);
   --main-white--color: #fff;
   --main-black--color: #313131;
   --second-white--color: rgb(241, 245, 255);
   --indicators-color: #bbb;
 }
+
+/* This is for LAYOUTS */
+.container {
+  padding: 1rem 2rem .2rem 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--third-main--color);
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 10px;
+  min-height: 40px;
+}
+
 
 
 /* This is for NAVBAR section */
@@ -143,11 +160,15 @@ html {
 
   .nav-items ul {
     gap: 2.5rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 
     & i {
       margin-right: 1rem;
     }
+  }
+
+  .icons-text {
+    display: none;
   }
 }
 
@@ -182,7 +203,7 @@ html {
 
 @media (max-width:450px) {
   .nav-items ul {
-    gap: 1rem;
+    /* gap: 1rem; */
 
     & i {
       margin-right: .5rem;
@@ -387,7 +408,6 @@ html {
 .items-1 {
   background-color: var(--main-white--color);
   padding: 1rem 2rem;
-  margin-top: 1rem;
   display: flex;
   gap: 2rem;
   width: 100%;
@@ -438,23 +458,53 @@ html {
   align-items: center;
   gap: .5rem;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  position: relative;
 
   & .upto {
     opacity: .8;
   }
+}
 
-  & .offValue {
-    font-size: 2.5rem;
-    font-weight: 800;
-    padding: 4px;
-    color: var(--main-color);
+.offValue {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 4px;
+  color: var(--second-main--color);
+
+  & sup {
+    font-size: 1rem;
   }
 }
 
 .item-1--arrow {
-  background-color: var(--second-main--color);
-  padding: 5px;
+  background-color: rgb(48, 191, 163);
+  padding: 8px;
   border-radius: 50%;
   color: var(--main-white--color);
+  position: absolute;
+  top: 10%;
+  right: 1%;
+}
+
+@media (max-width:768px) {
+  .item-1--image {
+    width: 150px;
+  }
+
+  .item-1-details .detail {
+    font-size: 1.2rem;
+  }
+
+  .detail-span {
+    font-size: 1.2rem;
+  }
+
+  .up-to {
+    font-size: .8rem;
+  }
+
+  .offValue {
+    font-size: 2.5rem;
+  }
 }

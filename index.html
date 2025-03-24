@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PowerPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./public/video-logo/fabIcon.webp" type="image/x-icon">
   <link rel="stylesheet" href="src/style.css">
 </head>
 
 <body>
+  <!-- This is for NabBar -->
   <header>
     <nav class="navbar flex-center">
       <div class="nav-logo">
@@ -28,15 +31,16 @@
       </div>
       <div class="nav-items">
         <ul>
-          <li><i class="fa-regular fa-user"></i> Login
-            <i class="fa-solid fa-angle-up angle-arrow"></i>
+          <li><i class="fa-regular fa-user"></i> <span class="icons-text">Login</span>
+            <i class="fa-solid fa-angle-up angle-arrow icons-text"></i>
           </li>
-          <li><i class="fa-regular fa-heart"></i> Like</li>
-          <li><i class="fa-solid fa-cart-plus"></i> Cart</li>
+          <li><i class="fa-regular fa-heart"></i> <span class="icons-text">Like</span></li>
+          <li><i class="fa-solid fa-cart-plus"></i> <span class="icons-text">Cart</span></li>
         </ul>
       </div>
     </nav>
   </header>
+  <!-- This is for NabBar -->
 
 
   <!-- This is for main top section -->
@@ -76,6 +80,7 @@
       </div>
     </div>
   </section>
+  <!-- This is for main top section -->
 
 
   <!-- This is for main slider section -->
@@ -125,116 +130,47 @@
     </div>
     <div class="indicator-dots"></div>
   </section>
+  <!-- This is for main slider section -->
 
 
+  <!-- This is for item container -->
   <section class="item-section-1">
     <div class="container">
       <div class="items-1">
-        <div class="item-1 flex-center">
-          <div class="item-1--image">
-            <img src="public/allImg/cameras-1.webp" alt="">
-          </div>
-          <div class="item-1-details">
-            <div class="detail">NEW HOTTEST</div>
-            <div>
-              <span class="detail-span">DEALS</span>
-            </div>
-            <div class="detail">
-              IN CAMERAS
-            </div>
-            <div class="up-to">
-              <div class="upto">
-                <span>UP</span><br>
-                <span>TO</span>
-              </div>
-
-              <div class="off-value">
-                <span class="offValue">40<sup>%</sup></span>
-                <span class="item-1--arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item-1 flex-center">
-          <div class="item-1--image">
-            <img src="public/allImg/Desktop-1.webp" alt="">
-          </div>
-          <div class="item-1-details">
-            <div class="detail">THE NEW</div>
-            <div>
-              <span class="detail-span"> 360<sup>o</sup> CAMERAS</span>
-            </div>
-            <div class="detail">
-
-            </div>
-            <div class="up-to">
-              <div class="upto">
-                <span>UP</span><br>
-                <span>TO</span>
-              </div>
-
-              <div class="off-value">
-                <span class="offValue">50<sup>%</sup></span>
-                <span class="item-1--arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item-1 flex-center">
-          <div class="item-1--image">
-            <img src="public/allImg/laptop-1.webp" alt="tABLETS IMG">
-          </div>
-          <div class="item-1-details">
-            <div class="detail">TABLETS,<br>SMARTPHONES</div>
-            <div>
-              <span class="detail-span">DEALS</span>
-            </div>
-            <div class="detail">
-              IN CAMERAS
-            </div>
-            <div class="up-to">
-              <div class="upto">
-                <span>UP</span><br>
-                <span>TO</span>
-              </div>
-
-              <div class="off-value">
-                <span class="offValue">30<sup>%</sup></span>
-                <span class="item-1--arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item-1 flex-center">
-          <div class="item-1--image">
-            <img src="public/allImg/360-camers-1.webp" alt="">
-          </div>
-          <div class="item-1-details">
-            <div class="detail">NEW HOTTEST</div>
-            <div>
-              <span class="detail-span">DEALS</span>
-            </div>
-            <div class="detail">
-              IN CAMERAS
-            </div>
-            <div class="up-to">
-              <div class="upto">
-                <span>UP</span><br>
-                <span>TO</span>
-              </div>
-
-              <div class="off-value">
-                <span class="offValue">70<sup>%</sup></span>
-                <span class="item-1--arrow"><i class="fa-solid fa-arrow-right"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
 
       </div>
     </div>
   </section>
+  <!-- This is for item container -->
+
+
+  <!-- template for items 1  -->
+  <template id="products-1--template">
+    <div class="item-1 flex-center">
+      <div class="item-1--image">
+        <img src="" alt="product img" id="product-img">
+      </div>
+      <div class="item-1-details">
+        <div class="detail" id="product-new"></div>
+        <div>
+          <span class="detail-span" id="main-product--title"></span>
+        </div>
+        <div class="detail" id="off-in">
+        </div>
+        <div class="up-to">
+          <div class="upto">
+            <span>UP</span><br>
+            <span>TO</span>
+          </div>
+          <div class="off-value">
+            <span class="offValue" id="off-value"> </span>
+            <span class="item-1--arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <!-- template for items 1  -->
 
   <script type="module" src="src/main.js"></script>
 </body>
