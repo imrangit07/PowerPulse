@@ -321,16 +321,16 @@ html {
 .slider-nav {
   position: absolute;
   height: 30%;
-  width: 3%;
+  width: 2%;
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--main-white--color);
   color: var(--main-black--color);
   border: none;
-  padding: 1rem;
   cursor: pointer;
   font-size: 2rem;
   z-index: 999;
+  opacity: .4;
 }
 
 
@@ -341,10 +341,16 @@ html {
 
 .slider-nav.prev {
   left: 0px;
+  & i{
+    rotate: -90deg;
+  }
 }
 
 .slider-nav.next {
   right: 0px;
+  & i{
+    rotate: 90deg;
+  }
 }
 
 .main-slider--section {
@@ -385,6 +391,12 @@ html {
 }
 
 @media (max-width:750px) {
+  .slider-nav {
+   display: flex;
+   align-items: center;
+   justify-content:center;
+  }
+  
   .indicator {
     margin: .5rem .6rem;
   }
