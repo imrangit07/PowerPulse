@@ -9,7 +9,7 @@
     },
     {
         "itemId": 2,
-        "imgUrl": "/public/allImg/tablet-1.webp",
+        "imgUrl": "/allImg/tablet-1.webp",
         "deal": "TABLETS",
         "title": "AND MORE",
         "offIn": "SMARTPHONES",
@@ -17,7 +17,7 @@
     },
     {
         "itemId": 3,
-        "imgUrl": "allImg/Desktop-1.webp",
+        "imgUrl": "/allImg/Desktop-1.webp",
         "deal": "THE NEW",
         "title": "DEALS",
         "offIn": "IN DESKTOPS",
@@ -25,7 +25,7 @@
     },
     {
         "itemId": 4,
-        "imgUrl": "public/allImg/360-cameras-1.webp",
+        "imgUrl": "/allImg/360-cameras-1.webp",
         "deal": "THE NEW",
         "title": "360 CAMERAS",
         "offIn": "",
