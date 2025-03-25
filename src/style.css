@@ -299,7 +299,12 @@ html {
 }
 @media (max-width:490px){
   .main-top{
-    padding-left: 17rem;
+    padding-left: 15rem;
+  }
+}
+@media (max-width:320px){
+  .main-top{
+    padding-left: 15rem;
   }
 }
 
