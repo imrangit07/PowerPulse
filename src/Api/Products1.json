@@ -1,10 +1,10 @@
 [
     {
         "itemId": 1,
-        "imgUrl": "/allImg/cameras-1.webp",
-        "deal": "NEW HOTTEST",
-        "title": "DEALS",
-        "offIn": " IN CAMERAS",
+        "imgUrl": "/allImg/360-cameras-1.webp",
+        "deal": "THE NEW",
+        "title": "360 CAMERAS",
+        "offIn": "",
         "off": "70<sup>%</sup>"
     },
     {
@@ -17,18 +17,18 @@
     },
     {
         "itemId": 3,
+        "imgUrl": "/allImg/cameras-1.webp",
+        "deal": "NEW HOTTEST",
+        "title": "DEALS",
+        "offIn": " IN CAMERAS",
+        "off": "70<sup>%</sup>"
+    },
+    {
+        "itemId": 4,
         "imgUrl": "/allImg/Desktop-1.webp",
         "deal": "THE NEW",
         "title": "DEALS",
         "offIn": "IN DESKTOPS",
         "off": "50<sup>%</sup>"
-    },
-    {
-        "itemId": 4,
-        "imgUrl": "/allImg/360-cameras-1.webp",
-        "deal": "THE NEW",
-        "title": "360 CAMERAS",
-        "offIn": "",
-        "off": "70<sup>%</sup>"
     }
 ]

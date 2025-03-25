@@ -192,13 +192,16 @@ html {
     top: 6.5rem;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 70%;
+    width: 80%;
+    border-radius: 10rem;
+    padding:0 1rem;
     background-color: var(--main-white--color);
   }
 
   .search {
     padding: 1.2rem 0 1.2rem .5rem;
   }
+
 }
 
 @media (max-width:450px) {
@@ -277,6 +280,7 @@ html {
 @media (max-width:750px) {
   .main-top {
     margin-top: 5.5rem;
+    /* padding-left: 10rem; */
   }
 
   .main-top--container {
@@ -286,6 +290,16 @@ html {
 
   .main-top--title {
     font-size: 1rem;
+  }
+}
+@media (max-width:500px){
+  .main-top{
+    padding-left: 8rem;
+  }
+}
+@media (max-width:490px){
+  .main-top{
+    padding-left: 17rem;
   }
 }
 
