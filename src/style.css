@@ -520,26 +520,6 @@ html {
 }
 
 @media (max-width:768px) {
-  /* .item-1--image {
-    width: 150px;
-  }
-
-  .item-1-details .detail {
-    font-size: 1.2rem;
-  }
-
-  .detail-span {
-    font-size: 1.2rem;
-  }
-
-  .up-to {
-    font-size: .8rem;
-  }
-
-  .offValue {
-    font-size: 2.5rem;
-  } */
-  
   .items-1{
     padding:0;
     background-color: transparent;
@@ -560,6 +540,7 @@ html {
 
 .features-list {
   display: flex;
+  align-items: center;
   overflow-x: auto;
   background-color: var(--main-white--color);
   border-radius: 10px;
