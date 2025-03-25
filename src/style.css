@@ -299,10 +299,10 @@ html {
 }
 @media (max-width:490px){
   .main-top{
-    padding-left: 15rem;
+    padding-left: 10rem;
   }
 }
-@media (max-width:320px){
+@media (max-width:350px){
   .main-top{
     padding-left: 18rem;
   }
@@ -519,7 +519,7 @@ html {
 }
 
 @media (max-width:768px) {
-  .item-1--image {
+  /* .item-1--image {
     width: 150px;
   }
 
@@ -537,5 +537,13 @@ html {
 
   .offValue {
     font-size: 2.5rem;
+  } */
+  
+  .items-1{
+    padding:0;
+    background-color: transparent;
+  }
+  .item-1{
+    background-color: var(--main-white--color);
   }
 }

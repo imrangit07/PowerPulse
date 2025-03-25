@@ -1,19 +1,19 @@
 [
     {
         "itemId": 1,
-        "imgUrl": "/allImg/360-cameras-1.webp",
-        "deal": "THE NEW",
-        "title": "360 CAMERAS",
-        "offIn": "",
-        "off": "70<sup>%</sup>"
-    },
-    {
-        "itemId": 2,
         "imgUrl": "/allImg/tablet-1.webp",
         "deal": "TABLETS",
         "title": "AND MORE",
         "offIn": "SMARTPHONES",
         "off": "30<sup>%</sup>"
+    },
+    {
+        "itemId": 2,
+        "imgUrl": "/allImg/360-cameras-1.webp",
+        "deal": "THE NEW",
+        "title": "360 CAMERAS",
+        "offIn": "",
+        "off": "70<sup>%</sup>"
     },
     {
         "itemId": 3,
