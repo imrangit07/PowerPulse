@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./public/video-logo/fabIcon.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="./public/video-logo/fabIcon.webp" type="image/x-icon">
   <link rel="stylesheet" href="src/style.css">
 </head>
 
@@ -31,11 +31,30 @@
       </div>
       <div class="nav-items">
         <ul>
-          <li><i class="fa-regular fa-user"></i> <span class="icons-text">Login</span>
+          <li class="login-li">
+            <i class="fa-regular fa-user"></i>
+            <span class="icons-text">Login</span>
             <i class="fa-solid fa-angle-up angle-arrow icons-text"></i>
+            <div class="sub-navBar">
+             <a href="#" class="sub-login">
+              <i class="fa-regular fa-user"></i>
+              Login
+            </a>
+             <a href="#" class="sub-signup">
+              <i class="fa-solid fa-user-plus"></i>Signup</a>
+            </div>
           </li>
-          <li><i class="fa-regular fa-heart"></i> <span class="icons-text">Like</span></li>
-          <li><i class="fa-solid fa-cart-plus"></i> <span class="icons-text">Cart</span></li>
+          <li class="like-li">
+            <i class="fa-regular fa-heart"></i> 
+            <span class="icons-text">Like</span>
+            <div class="like-count flex-center">0</div>
+          </li>
+          <li class="cart-li">
+            <i class="fa-solid fa-cart-plus"></i> 
+            <span class="icons-text">Cart</span>
+            <div class="cart-count flex-center">0</div>
+          </li>
+
         </ul>
       </div>
     </nav>
@@ -177,35 +196,35 @@
 
 
   <!-- This is for features sections -->
-   <section class="features-sections">
+  <section class="features-sections">
 
     <div class="container">
-       <div class="features-list ">
+      <div class="features-list ">
         <div class="features flex-center">
           <div class="features-icon">
             <i class="fa-solid fa-truck"></i>
           </div>
           <div class="features-detail">
             <div class="feature-title">
-             Free Delivery
+              Free Delivery
             </div>
             <div class="feature-sub--title">
-             from $30
+              from $30
             </div>
           </div>
         </div>
 
-        
+
         <div class="features flex-center">
           <div class="features-icon">
             <i class="fa-regular fa-handshake"></i>
           </div>
           <div class="features-detail">
             <div class="feature-title">
-             90% Positive
+              90% Positive
             </div>
             <div class="feature-sub--title">
-             Feedback
+              Feedback
             </div>
           </div>
         </div>
@@ -216,10 +235,10 @@
           </div>
           <div class="features-detail">
             <div class="feature-title">
-             365 days
+              365 days
             </div>
             <div class="feature-sub--title">
-             for free return
+              for free return
             </div>
           </div>
         </div>
@@ -230,39 +249,39 @@
           </div>
           <div class="features-detail">
             <div class="feature-title">
-             Payment
+              Payment
             </div>
             <div class="feature-sub--title">
-             Secure System
+              Secure System
             </div>
           </div>
         </div>
 
         <div class="features flex-center">
           <div class="features-icon">
-          <i class="fa-solid fa-tags"></i>
+            <i class="fa-solid fa-tags"></i>
           </div>
           <div class="features-detail">
             <div class="feature-title">
-             Only Best
+              Only Best
             </div>
             <div class="feature-sub--title">
-             Brands
+              Brands
             </div>
           </div>
         </div>
 
 
-       </div>
+      </div>
     </div>
 
-   </section>
+  </section>
 
 
 
 
 
-  
+
 
   <script type="module" src="src/main.js"></script>
 </body>

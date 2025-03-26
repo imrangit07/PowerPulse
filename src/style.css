@@ -130,6 +130,7 @@ html {
   display: flex;
   gap: 4.5rem;
   font-size: 2rem;
+  
 
   & i {
     margin-right: 1rem;
@@ -138,8 +139,63 @@ html {
   & .angle-arrow {
     rotate: 180deg;
     margin-left: .4rem;
+    transition: rotate ease 0.5s;
   }
 }
+
+/* Menu (login-li) */
+.login-li {
+  position: relative;
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+/* Submenu hidden by default */
+.login-li .sub-navBar {
+  background-color: var(--second-white--color);
+  padding: 2rem 3rem;
+  position: absolute;
+  width: 200px;
+  right: -30px;
+  bottom: -120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* Slight slide effect */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Show submenu on hover */
+.login-li:hover .sub-navBar,
+.login-li .sub-navBar:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Submenu links */
+.sub-login,
+.sub-signup {
+  display: block;
+  text-decoration: none;
+  color: var(--main-color);
+  margin: 1.2rem 0;
+  font-size: 1.6rem;
+  transition: color 0.2s ease;
+}
+
+.sub-login:hover,
+.sub-signup:hover {
+  color: var(--third-main--color);
+}
+
+/* Arrow rotation effect */
+.nav-items:hover .angle-arrow {
+  rotate: 0deg;
+}
+
 
 @media (max-width:1150px) {
   .navbar {
@@ -171,6 +227,19 @@ html {
   .icons-text {
     display: none;
   }
+}
+.like-li,.cart-li{
+  position: relative;
+}
+.like-count,.cart-count{
+  background-color:var(--third-main--color);
+  position: absolute;
+  width:2.2rem;
+  height: 2.2rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  top: 8px;
+  left: -8px;
 }
 
 @media (max-width:750px) {
@@ -225,7 +294,7 @@ html {
 
 @media (max-width:350px) {
   .nav-items ul {
-    gap: .6rem;
+    gap: 1.5rem;
     text-align: center;
   }
 
@@ -552,7 +621,7 @@ html {
 
 .features {
   width: 200px;
-  flex: 0 0 180px;
+  flex: 1 0 180px;
   gap: 2rem;
   padding: 2.5rem 1rem;
   scroll-snap-align: start;
@@ -598,5 +667,8 @@ html {
 @media (min-width:1024px) {
   .features{
     flex: 0 0 20%;
+    gap: 4rem;
   }
+  .features-icon i {
+    font-size: 3rem;  }
 }
