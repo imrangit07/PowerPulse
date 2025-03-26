@@ -157,7 +157,7 @@ html {
   position: absolute;
   width: 200px;
   right: -30px;
-  bottom: -120px;
+  bottom: -130px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px); /* Slight slide effect */
@@ -184,6 +184,9 @@ html {
   margin: 1.2rem 0;
   font-size: 1.6rem;
   transition: color 0.2s ease;
+}
+.sub-signup{
+  margin-top: 2rem;
 }
 
 .sub-login:hover,
@@ -227,6 +230,10 @@ html {
   .icons-text {
     display: none;
   }
+}
+.login-li .sub-navBar{
+  right: -80px;
+
 }
 .like-li,.cart-li{
   position: relative;
@@ -605,6 +612,7 @@ html {
 
 .features-sections {
   width: 100%;
+  padding-bottom: 1.5rem;
 }
 
 .features-list {
