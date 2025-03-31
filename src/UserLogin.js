@@ -1,5 +1,9 @@
 const UserLogin = () => {
-    document.querySelector("#user-login").addEventListener("click", (e) => {
+    const userLogin = document.querySelector("#user-login");
+
+    const handelLogin = (e) => {
+        e.preventDefault();
+        const currentUser = document.querySelector("#current-user");
         const loginContainer = document.querySelector("#login-signup--forms");
 
 
@@ -10,23 +14,27 @@ const UserLogin = () => {
             userId: user_Id,
             userpassword: user_password,
         }
-        e.preventDefault()
+
 
         const { userName, email, password } = JSON.parse(localStorage.getItem("user"));
-        console.log(userName, email, password);
-        console.log(userId, userpassword);
+        // console.log(userName, email, password);
+        // console.log(userId, userpassword);
 
-        if ((userName === userId || email === userId) && (password === userpassword)) {
-            alert("Login successfully");
-            loginContainer.style.display = "none";
-
-        } else {
-            alert("Please fill correct details");
+        if (!((userName === userId) || (email == userId))) {
+            document.querySelector("#user-id-err").textContent = "User Name/Id is not found!";
+        }
+        else if (!(password === userpassword)) {
+            document.querySelector("#user-pass-err").textContent = "Password is Wrong!";
         }
 
+        if ((userName === userId || email === userId) && (password === userpassword)) {
+            window.location.href = "http://localhost:5173/";
+        }
 
-    })
+    }
 
-}
+    userLogin.addEventListener("click", handelLogin)
+
+};
 
 export default UserLogin;
