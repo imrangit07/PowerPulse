@@ -1,6 +1,6 @@
 import './style.css';
 import './AutoSwiper.js';
-// import Toggle from './toggle.js';
+import Toggle from './Toggle.js';
 import ToggleLogin from './ToggleLogin.js';
 import UserSignup from './UserSignup.js';
 import UserLogin from './UserLogin.js';
@@ -10,7 +10,7 @@ import UserLogin from './UserLogin.js';
 import products1 from "./Api/Products1.json";
 import { showProducts1Content } from './products/Product1';
 
-// Toggle();
+Toggle();
 ToggleLogin();
 UserSignup();
 UserLogin();
