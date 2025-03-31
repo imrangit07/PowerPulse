@@ -148,7 +148,7 @@ html {
   cursor: pointer;
 }
 #login-signup--forms{
-  /* display: none; */
+  display: none;
 }
 
 .login-signup{
@@ -197,6 +197,11 @@ html {
   transform: translateX(100%);
   opacity: 0;
   z-index: 1;
+}
+.input-group label{
+  color: red;
+  display: block;
+  margin-bottom: .5rem;
 }
 
 .login-signup--container.active .login-form {

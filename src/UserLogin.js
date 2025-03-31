@@ -1,12 +1,12 @@
 const UserLogin = () => {
     document.querySelector("#user-login").addEventListener("click", (e) => {
         const loginContainer = document.querySelector("#login-signup--forms");
-       
 
-        let user_Id = document.querySelector("#user-email--username").value;
-        let user_password = document.querySelector("#user-password").value;
 
-        let { userId, userpassword } = {
+        const user_Id = document.querySelector("#user-email--username").value.trim();
+        const user_password = document.querySelector("#user-password").value;
+
+        const { userId, userpassword } = {
             userId: user_Id,
             userpassword: user_password,
         }
