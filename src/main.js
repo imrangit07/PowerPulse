@@ -1,16 +1,16 @@
 import './style.css';
-import './AutoSwiper';
-import Toggle from './toggle';
-import ToggleLogin from './ToggleLogin';
-import UserSignup from './UserSignup';
-import UserLogin from './UserLogin';
+import './AutoSwiper.js';
+// import Toggle from './toggle.js';
+import ToggleLogin from './ToggleLogin.js';
+import UserSignup from './UserSignup.js';
+import UserLogin from './UserLogin.js';
 // import { toggleLogin } from './Login';
 
 
 import products1 from "./Api/Products1.json";
 import { showProducts1Content } from './products/Product1';
 
-Toggle();
+// Toggle();
 ToggleLogin();
 UserSignup();
 UserLogin();
