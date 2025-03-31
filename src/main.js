@@ -1,6 +1,6 @@
 import './style.css';
 import './AutoSwiper';
-import { Toggle } from './toggle';
+import Toggle from './toggle';
 import ToggleLogin from './ToggleLogin';
 import UserSignup from './UserSignup';
 import UserLogin from './UserLogin';

@@ -1,4 +1,4 @@
-export function Toggle(){
+    const Toggle = ()=>{
     const container = document.getElementById('login-signup--container');
     const loginBtn = document.getElementById('loginBtn');
     const signupBtn = document.getElementById('signupBtn');
@@ -19,4 +19,5 @@ export function Toggle(){
     
     });
 }
+export default Toggle;
 
