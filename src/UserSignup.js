@@ -4,33 +4,42 @@ const UserSignup = () => {
     const handleSignup = (e) => {
         e.preventDefault();
 
+        const selectUserName = document.querySelector("#userName");
+        const selectUserEmail = document.querySelector("#userEmail");
+        const selectUserPassword = document.querySelector("#userPassword");
+
+        const nameError = document.querySelector("#userName-err");
+        const emailError = document.querySelector("#userEmail-err");
+        const passwordError = document.querySelector("#userPassword-err");
+
         const userDetails = {
-            userName: document.querySelector("#userName").value.trim(),
-            email: document.querySelector("#userEmail").value.trim(),
-            password: document.querySelector("#userPassword").value,
+            userName: selectUserName.value.trim(),
+            email: selectUserEmail.value.trim(),
+            password: selectUserPassword.value,
         };
 
 
 
         if (userDetails.userName === "") {
-            document.querySelector("#userName-err").textContent = "User Name is Required!";
-            document.querySelector("#userName").focus();
+            nameError.textContent = "User Name is Required!";
+            selectUserName.focus();
             return;
-        } else if (userDetails.email === "") {
-            document.querySelector("#userEmail-err").textContent = "Email is Required!";
-            document.querySelector("#userEmail").focus();
+        }
+        else if (userDetails.email === "") {
+            emailError.textContent = "Email is Required!";
+            selectUserEmail.focus();
             return;
         }
         else if (!(userDetails.email.includes("@gmail.com"))) {
-            document.querySelector("#userEmail-err").textContent = "Enter Valide Email Id Must Have @gmail.com";
-            document.querySelector("#userEmail").focus();
+            emailError.textContent = "Enter Valide Email Id Must Have @gmail.com";
+            selectUserEmail.focus();
             return;
         }
         else if (userDetails.password === "") {
-            document.querySelector("#userPassword-err").textContent = "Password is Required!";
-            document.querySelector("#userPassword").focus();
+            passwordError.textContent = "Password is Required!";
+            selectUserPassword.focus();
             return;
-        } 
+        }
         else {
             const container = document.getElementById('login-signup--container');
             const toggleLogin = document.getElementById('loginBtn');
@@ -41,12 +50,12 @@ const UserSignup = () => {
             toggleLogin.classList.add('active');
             ToggleSignup.classList.remove('active');
 
-            document.querySelector("#userName").value = "";
-            document.querySelector("#userEmail").value = "";
-            document.querySelector("#userPassword").value = "";
-            document.querySelector("#userName-err").textContent = "";
-            document.querySelector("#userEmail-err").textContent = "";
-            document.querySelector("#userPassword-err").textContent = "";
+            selectUserName.value = "";
+            selectUserEmail.value = "";
+            selectUserPassword.value = "";
+            nameError.textContent = "";
+            emailError.textContent = "";
+            passwordError.textContent = "";
 
         }
         const user = JSON.parse(localStorage.getItem("user"));
@@ -57,14 +66,12 @@ const UserSignup = () => {
             localStorage.setItem("user", JSON.stringify(userDetails));
         }
         else if (userDetails.email === user.email) {
-            alert("This Email Id is Already Exists. Go and Login!");
-            document.querySelector("#userEmail").focus();
+            // alert("This Email Id is Already Exists. Go and Login!");
+            selectUserEmail.focus();
             return;
         }
 
     }
-
-
 
     signupBtn.addEventListener("click", handleSignup);
 };

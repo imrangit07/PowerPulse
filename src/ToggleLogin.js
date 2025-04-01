@@ -1,19 +1,20 @@
 const ToggleLogin = ()=> {
     const loginContainer = document.querySelector("#login-signup--forms");
     const loginBtn = document.querySelector("#login-li");
-    let count = 0;
+    let display = "none";
 
     loginBtn.addEventListener("click", () => {
 
-        if (count === 0) {
+        if (display === "none") {
             loginContainer.style.display = "flex";
-            console.log("flex");
-            count++;
+            console.log(display);
+            
+            display="flex";
 
         } else {
             loginContainer.style.display = "none";
-            console.log("none");
-            count--;
+            console.log(display);
+            display="none";
         }
 
     })
