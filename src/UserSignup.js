@@ -66,7 +66,7 @@ const UserSignup = () => {
             localStorage.setItem("user", JSON.stringify(userDetails));
         }
         else if (userDetails.email === user.email) {
-            // alert("This Email Id is Already Exists. Go and Login!");
+            alert("This Email Id is Already Exists. Go and Login!");
             selectUserEmail.focus();
             return;
         }
