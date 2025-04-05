@@ -5,6 +5,7 @@ import ToggleLogin from './ToggleLogin.js';
 import UserSignup from './UserSignup.js';
 import {UserLogin,UserLogout} from './UserLogin.jsx';
 import LoadPage from './Load.js';
+import getLaptopData from './products/Laptops.js';
 // import { toggleLogin } from './Login';
 
 
@@ -16,6 +17,7 @@ ToggleLogin();
 UserSignup();
 UserLogin();
 UserLogout();
+getLaptopData();
 
 
 

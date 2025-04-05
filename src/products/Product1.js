@@ -9,9 +9,10 @@ export const showProducts1Content = (product) => {
     product.forEach(currentProduct => {
         const { itemId, imgUrl, deal, title, offIn, off } = currentProduct;
 
-        const productClone = document.importNode(products1Template.content, true);
+        // const productClone = document.importNode(products1Template.content, true); //This is old one
+        const productClone = products1Template.content.cloneNode(true);
 
-        console.log(productClone);
+        // console.log(productClone);
         productClone.querySelector("#product-img").src = imgUrl;
         productClone.querySelector("#product-new").innerText = deal;
         productClone.querySelector("#main-product--title").innerText = title;
