@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="src/style.css">
 </head>
 
-<body onload="">
+<body>
   <!-- This is for NabBar -->
   <header>
     <nav class="navbar flex-center">
@@ -43,11 +43,13 @@
             <span class="icons-text">Like</span>
             <div class="like-count flex-center">0</div>
           </li>
+          <a href="./cart.html" target="_blank">
           <li class="cart-li">
             <i class="fa-solid fa-cart-plus"></i>
             <span class="icons-text">Cart</span>
-            <div class="cart-count flex-center">0</div>
+            <div class="cart-count flex-center" id="cartCoutn">0</div>
           </li>
+        </a>
 
         </ul>
       </div>
@@ -136,7 +138,7 @@
 
 
   <!-- This is for main top section -->
-  <section class="main-top--section">
+  <section class="main-top--section displayNone">
     <div class="container">
       <div class="main-top">
         <div class="items">
@@ -176,7 +178,7 @@
 
 
   <!-- This is for main slider section -->
-  <section class="main-slider--section ">
+  <section class="main-slider--section displayNone">
     <div class="container">
       <div class="slider-container">
         <div class="slider-track">
@@ -228,48 +230,19 @@
 
 
   <!-- This is for item container -->
-  <section class="item-section-1">
+  <section class="item-section-1 displayNone">
     <div class="container">
       <div class="items-1">
-
+        <!-- add items using js -->
       </div>
     </div>
   </section>
-
-  <!-- template for items 1  -->
-  <template id="products-1--template">
-    <div class="item-1 flex-center">
-      <div class="item-1--image">
-        <img src="" alt="product img" id="product-img">
-      </div>
-      <div class="item-1-details">
-        <div class="detail" id="product-new"></div>
-        <div>
-          <span class="detail-span" id="main-product--title"></span>
-        </div>
-        <div class="detail" id="off-in">
-        </div>
-        <div class="up-to">
-          <div class="upto">
-            <span>UP</span><br>
-            <span>TO</span>
-          </div>
-          <div class="off-value">
-            <span class="offValue" id="off-value"> </span>
-            <span class="item-1--arrow"><i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-  <!-- template for items 1  -->
-
   <!-- This is for item container -->
 
 
 
   <!-- This is for features sections -->
-  <section class="features-sections">
+  <section class="features-sections displayNone">
 
     <div class="container">
       <div class="features-list ">
@@ -352,13 +325,13 @@
 
 
   <!-- This is for Laptop  sections -->
-  <secton class="product-sections" id="laptop-items">
+  <secton class="product-sections displayNone" id="laptop-items">
     <div class="container">
       <div class="product-heading">
         <h1>premium laptops</h1>
       </div>
       <div class="products-grid" id="add-laptop">
-       <!-- added product-2--template -->
+        <!-- added product-2--template -->
       </div>
     </div>
   </secton>
@@ -368,11 +341,10 @@
 
 
   <template id="product-2--template">
-    <div class="product-card">
+    <div class="product-card" data-id="card" id="card">
 
       <div class="image-container">
-        <img src="" alt="Product img" class="product-image"
-          id="laptop-img">
+        <img src="" alt="Product img" class="product-image" id="laptop-img">
         <div class="wishlist-icon"><i class="fa-regular fa-heart"></i></div>
       </div>
 
@@ -389,8 +361,154 @@
     </div>
   </template>
 
-    <!-- This is for Laptop  sections -->
+  <!-- This is for Laptop  sections -->
 
+
+  <section class="full-detail-product" id="fullDetailProduct">
+
+  </section>
+
+
+  <template class="fullDetailProductTemp" id="fullDetailProductTemp">
+    <div class="container">
+      <div class="single-product--detail" id="productDetail">
+
+        <button class="back-button" id="backButton">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to product
+        </button>
+
+        <div class="single-detail-container">
+          <div class="single-detail--images">
+            <img src="" alt="" class="single-detail--mainImg" id="mainDetailImage">
+
+            <div class="single-detail--thumbnails">
+              <img src="" class="detail-thumbnail" id="detailThumbnail1" alt="">
+              <img src="" class="detail-thumbnail" id="detailThumbnail2" alt="">
+              <img src="" class="detail-thumbnail" id="detailThumbnail3" alt="">
+            </div>
+          </div>
+
+          <div class="single-detail--info">
+            <div style="display: flex; align-items: center; gap: 20px">
+              <h1 class="single-detail--title" id="detailTitle">Product </h1>
+             <div  style="background-color: rgb(190, 116, 201); font-size: 16px; padding: 5px 20px; margin-bottom: 20px; color: #fff; border-radius: 5px;">
+              <span>Stock : </span>
+              <span id="productQuantity">90</span>
+             </div>
+            </div>
+
+            <div class="single-price--container">
+              <div class="price-container">
+                <span class="single-original--price">9000</span>
+                <span class="single-current--price" id="currentPrice">6000</span>
+                <span class="single-discount">90 %</span>
+              </div>
+            </div>
+
+            <div class="single-detail--discription">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam eaque corrupti, quidem
+              ratione, veniam quaerat nulla, eius magni aspernatur facilis incidunt. Ipsa, autem nobis
+              iure laudantium atque at cupiditate ipsum?
+            </div>
+
+            <div class="single-detail-features">
+              <h1>Features:</h1>
+              <ul id="detailFeatures">
+
+              </ul>
+
+            </div>
+
+            <div class="quantity-selector">
+              <button class="quantity-btn" id="quantityDecrement">-</button>
+              <input type="text" class="quantity-input" id="quantityInput" value="1">
+              <button class="quantity-btn" id="quantityIncrement">+</button>
+
+              <span id="outOfStock" style="color: red; margin-left: 20px; font-size: 16px;"></span>
+            </div>
+
+            <button class="add-to--cart" id="addToCart">
+              <i class="fa-brands fa-shopify"></i>Add to Cart
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </template>
+
+
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-section about">
+        <div class="footer-icon">
+          <img src="./public/video-logo/footer-icon.webp" alt="">
+          <h2> PowerPuls</h2>
+        </div>
+        <p>Your one-stop destination for electronics, gadgets, and more.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-section links">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">SmartPhones</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Watchs</a></li>
+          <li><a href="#">HeadPhones</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section links">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe for latest tech updates and deals!</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="footer-middle">
+      <div class="payments">
+        <p>We Accept:</p>
+        <img src="./public/video-logo/visa.webp" alt="Visa">
+        <img src="./public/video-logo/mastercard.webp" alt="MasterCard">
+        <img src="./public/video-logo/paypal.webp" alt="PayPal">
+        <img src="./public/video-logo/apple-pay.webp" alt="Apple Pay">
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 PowerPuls. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
 
 
 

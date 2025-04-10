@@ -1,12 +1,12 @@
 {
     "AllProducts":[
         {
-        "id":1,
         "mainImage":"/allImg/product-laptop/product-laptop-1.webp",
         "title":"ASUS Vivobook 15",
         "originalPrice":69999,
         "discount":30,
-        "allImages":[],
+        "productQuantity":10,
+        "allImages":["/allImg/product-laptop/product-laptop-1.1.webp","/allImg/product-laptop/product-laptop-1.2.webp","/allImg/product-laptop/product-laptop-1.3.webp"],
         "description":"ASUS Vivobook 15 Intel Core i5 12th Gen 1235U - (8GB/512 GB SSD/Windows 11 Home) X1504ZA-NJ527WS|X1504ZA-NJ522WS Thin and Light Laptop (15.6 Inch, Cool Silver, 1.70 Kg, With MS Office)",
         "features":[
             "Intel Core i5 12th Gen",
@@ -17,12 +17,12 @@
         ]
     },
         {
-        "id":2,
         "mainImage":"/allImg/product-laptop/product-laptop-2.webp",
         "title":"Lenovo V15 AMD",
         "originalPrice":44990,
         "discount":44,
-        "allImages":[],
+        "productQuantity":12,
+        "allImages":["/allImg/product-laptop/product-laptop-2.1.webp","/allImg/product-laptop/product-laptop-2.2.webp","/allImg/product-laptop/product-laptop-2.3.webp"],
         "description":"ASUS Vivobook 15 Intel Core i5 12th Gen 1235U - (8GB/512 GB SSD/Windows 11 Home) X1504ZA-NJ527WS|X1504ZA-NJ522WS Thin and Light Laptop (15.6 Inch, Cool Silver, 1.70 Kg, With MS Office)",
         "features":[
             "AMD Ryzen 3 Quad Core 7th Gen",
@@ -33,12 +33,12 @@
         ]
     },
         {
-        "id":3,
         "mainImage":"/allImg/product-laptop/product-laptop-3.webp",
         "title":"Acer Aspire 3",
         "originalPrice":32999,
         "discount":51,
-        "allImages":[],
+        "allImages":["/allImg/product-laptop/product-laptop-3.1.webp","/allImg/product-laptop/product-laptop-3.2.webp","/allImg/product-laptop/product-laptop-3.3.webp"],
+        "productQuantity":15,
         "description":"Acer Aspire 3 Intel Celeron Dual Core - (8 GB/512 GB SSD/Windows 11 Home) A311-45 Thin and Light Laptop (11.6 inch, Steel Grey, 1.0 kg)",
         "features":[
             "Intel Celeron Dual Core",
@@ -49,12 +49,12 @@
         ]
     },
         {
-        "id":4,
         "mainImage":"/allImg/product-laptop/product-laptop-4.webp",
         "title":"HP 15 G9",
         "originalPrice":74990,
         "discount":52,
-        "allImages":[],
+        "allImages":["/allImg/product-laptop/product-laptop-1.1.webp","/allImg/product-laptop/product-laptop-1.2.webp","/allImg/product-laptop/product-laptop-4.3.webp"],
+        "productQuantity":10,
         "description":"HP 15 G9 (2025) AMD Ryzen 5 Hexa Core 5625U -(16 GB/512 GB SSD/Windows 11 Home) 15 G9 Thinand Light Laptop (15.6 inch, Silver, 1.5 kg, With MS Office) 4",
         "features":[
             "AMD Ryzen 5 Hexa Core",
@@ -65,12 +65,12 @@
         ]
     },
         {
-        "id":5,
         "mainImage":"/allImg/product-laptop/product-laptop-5.webp",
         "title":"DELL Inspiron 5430",
         "originalPrice":55000,
         "discount":29,
-        "allImages":[],
+        "allImages":["/allImg/product-laptop/product-laptop-5.1.webp","/allImg/product-laptop/product-laptop-5.2.webp","/allImg/product-laptop/product-laptop-5.3.webp"],
+        "productQuantity":5,
         "description":"DELL Inspiron 5430 Intel Core i5 13th Gen - (16 GB/512 GB SSD/Windows 11 Home) IN54308TR2G001ORS1 Thin and Light Laptop (14 inch, Platinum Silver, With MS Office)",
         "features":[
             "Intel Core i5 13th Gen",
@@ -81,12 +81,12 @@
         ]
     },
         {
-        "id":6,
         "mainImage":"/allImg/product-laptop/product-laptop-6.webp",
         "title":"HP 255 G10",
         "originalPrice":26990,
         "discount":19,
-        "allImages":[],
+        "allImages":["/allImg/product-laptop/product-laptop-6.1.webp","/allImg/product-laptop/product-laptop-6.2.webp","/allImg/product-laptop/product-laptop-6.3.webp"],
+        "productQuantity":20,
         "description":"HP 255 G10 (2024) AMD Ryzen 3 Quad Core 7320U- (8 GB/512 GB SSD/Windows 11 Home) 250 G10Thin and Light Laptop (15.6 inch, Silver, 1.35 kg)",
         "features":[
             "AMD Ryzen 3 Quad Core",
@@ -97,13 +97,13 @@
         ]
     },
         {
-        "id":7,
         "mainImage":"/allImg/product-laptop/product-laptop-7.webp",
         "title":"Acer Aspire 7 ",
         "originalPrice":52900,
         "discount":30,
-        "allImages":[],
-        "description":"Acer Aspire 7 Intel Core i5 13th Gen 13420H - (16GB/512 GB SSD/Windows 11 Home/6 GB Graphics/NVIDIA GeForce RTX 3050) A715-79G Gaming Laptop (15.6 Inch, Black, 1.99 Kg)",
+        "allImages":["/allImg/product-laptop/product-laptop-7.1.webp","/allImg/product-laptop/product-laptop-7.2.webp","/allImg/product-laptop/product-laptop-7.3.webp"],
+        "productQuantity":16,
+        "description":"Acer Aspire 7 Intel Core i5 13th Gen 13420H - (16GB/512 GB SSD/Windows 11 Home/6 GB GraphiceForce RTX 3050) A715-79G Gaming Laptop (15.6 Inch, Black, 1.99 Kg)",
         "features":[
             "AMD Ryzen 3 Quad Core",
             "16 GB | 512GB",
@@ -113,12 +113,12 @@
         ]
     },
         {
-        "id":8,
         "mainImage":"/allImg/product-laptop/product-laptop-8.webp",
         "title":"HP Pavilion Intel",
         "originalPrice":25390,
         "discount":15,
-        "allImages":[],
+        "allImages":["/allImg/product-laptop/product-laptop-8.1.webp","/allImg/product-laptop/product-laptop-8.2.webp","/allImg/product-laptop/product-laptop-8.3.webp"],
+        "productQuantity":30,
         "description":"HP Pavilion Intel Core i5 12th Gen 1240P - (8 GB/512GB SSD/Windows 11 Home) 15-EG2009TU Thin and Light Laptop (15.6 inch, Natural Silver, 1.75 kg, With MS Office)",
         "features":[
             "AMD Ryzen 5 Hexa Core",
