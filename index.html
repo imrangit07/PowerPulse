@@ -19,10 +19,12 @@
     <nav class="navbar flex-center">
       <div class="nav-logo">
         <div class="video-crop-container">
-          <video controls autoplay muted loop>
+          <a href="./index.html" style="cursor: pointer;">
+          <video  controls autoplay muted loop>
             <source src="public/video-logo/PowerPuls.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+        </a>
         </div>
       </div>
       <div class="nav-search--input flex-center">
@@ -38,12 +40,14 @@
               <i class="fa-solid fa-angle-up angle-arrow icons-text"></i>
             </span>
           </li>
+          <a href="./wishList.html">
           <li class="like-li">
             <i class="fa-regular fa-heart"></i>
             <span class="icons-text">Like</span>
-            <div class="like-count flex-center">0</div>
+            <div class="like-count flex-center wishCount" id="wishCount">0</div>
           </li>
-          <a href="./cart.html" target="_blank">
+          </a>
+          <a href="./cart.html">
           <li class="cart-li">
             <i class="fa-solid fa-cart-plus"></i>
             <span class="icons-text">Cart</span>
@@ -345,7 +349,7 @@
 
       <div class="image-container">
         <img src="" alt="Product img" class="product-image" id="laptop-img">
-        <div class="wishlist-icon"><i class="fa-regular fa-heart"></i></div>
+        <div class="wishlist-icon" id="wishlist"><i class="fa-regular fa-heart"></i></div>
       </div>
 
 
@@ -372,6 +376,9 @@
   <template class="fullDetailProductTemp" id="fullDetailProductTemp">
     <div class="container">
       <div class="single-product--detail" id="productDetail">
+        <div class="wishlist-icon wishList" id="wishList"  data-id="1" style="width: 50px; height: 50px; top: 20px; right: 20px;">
+          <i  id="wishlistItem"  class="fa-solid fa-heart"  style="font-size: 25px; "></i>
+        </div>
 
         <button class="back-button" id="backButton">
           <i class="fa-solid fa-arrow-left"></i>
@@ -513,6 +520,7 @@
 
 
   <script type="module" src="src/main.js"></script>
+  
 </body>
 
 </html>

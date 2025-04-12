@@ -1,9 +1,12 @@
 import getData from "./getData";
 import { getLocalStorageCart } from "./getLocalStorageCart";
 import { showPriceQuantity } from "./showCartPriceQ";
-import { removeCartItem } from "./removeCartItem";
+import { removeCartItem,emptyCart } from "./removeCartItem";
 import LoadPage from "../Load";
 import { cardCountUpdate } from "./cardCountUpdate";
+import { cartTotalPrice } from "./cartTotalPrice";
+import { showWishListCount } from "./wishListItems";
+
 
 window.removeCartItem = removeCartItem;
 
@@ -14,8 +17,8 @@ const localStorageItem =  getLocalStorageCart();
 const apiData =await getData();
 
  let cartItems = apiData.filter((cartItem)=>{
-    let id = `cart${cartItem.id}`
-    return localStorageItem.some((locItem)=> locItem.cartId == id );
+   
+    return localStorageItem.some((locItem)=> locItem.cartId === cartItem.id );
  })
 //  console.log(cartItems);
 
@@ -27,7 +30,8 @@ const apiData =await getData();
 //    console.log("show "+localStorageData.price)
 
    addCartItem.innerHTML +=`
-   <div class="cart-item" id="cart${localStorageData.id}">
+   
+   <div class="cart-item" id="${localStorageData.id}">
           <img src="${cartProduct.mainImage}" alt="Smartphone" />
           <div class="product-details">
             <strong>${cartProduct.title}</strong>
@@ -35,16 +39,20 @@ const apiData =await getData();
           </div>
           <div class="price" style="text-align:center">₹${localStorageData.price}</div>
           <div class="quantity-controls">
-            <div><span id="quanitityNone">Quanitity : </span><span>${localStorageData.itemQuantity}</span></div>
+            <div id="quanitityDiv"><span id="quanitityNone">Quanitity : </span> <span> ${ localStorageData.itemQuantity} </span></div>
           </div>
           <button class="remove-btn" onclick="removeCartItem('${localStorageData.id}')">Remove</button>
         </div>`
 
-    
  })
+
  
 }
 
-cardCountUpdate()
-LoadPage()
+showWishListCount();
+cardCountUpdate();
+LoadPage();
 showCardItemsDetail();
+cartTotalPrice();
+emptyCart()
+

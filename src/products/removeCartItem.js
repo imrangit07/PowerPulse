@@ -1,23 +1,29 @@
 import { cardCountUpdate } from "./cardCountUpdate";
+import { cartTotalPrice } from "./cartTotalPrice";
 import { getLocalStorageCart } from "./getLocalStorageCart";
-// import { showCartItems } from "./showCartItems";
+import { showWishListCount } from "./wishListItems";
 
-export const removeCartItem=(id)=>{
+const defaultCart = document.querySelector("#defaultCart");
+
+
+const removeCartItem=(id)=>{
+
     let localStorageItem =  getLocalStorageCart();
-    console.log("click");
-    console.log(localStorageItem);
+    // console.log("click");
+    // console.log(localStorageItem);
     
     
     
     // id =  `cart${id}`
-    console.log("getid: " +id);
+    // console.log("getid: " +id);
     
     
-    localStorageItem = localStorageItem.filter((curItem)=> curItem.cartId !== `cart${id}`)
+    localStorageItem = localStorageItem.filter((curItem)=> curItem.cartId !== id)
+    
     
     localStorage.setItem("cartItems", JSON.stringify(localStorageItem))
 
-    let removeItem = document.querySelector(`#cart${id}`)
+    let removeItem = document.querySelector(`#${id}`)
     // console.log(remove);
     if(removeItem){
         console.log(removeItem);
@@ -25,6 +31,27 @@ export const removeCartItem=(id)=>{
         removeItem.remove();
     }
     
-
-    cardCountUpdate()
+    console.log(localStorageItem);
+    showWishListCount();
+    cardCountUpdate();
+    cartTotalPrice();
+    emptyCart();
 }
+
+const emptyCart = ()=>{
+    
+    let localStorageItem =  getLocalStorageCart();
+    console.log();
+    
+ if(localStorageItem.length<1){
+    defaultCart.style.display ="flex";
+    console.log("flex");
+    
+ }else{
+    defaultCart.style.display ="none";
+    console.log("none");
+
+ }
+}
+
+export {removeCartItem,emptyCart}

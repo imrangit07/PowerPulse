@@ -1,6 +1,7 @@
 {
     "AllProducts":[
         {
+        "id":"cart1",
         "mainImage":"/allImg/product-laptop/product-laptop-1.webp",
         "title":"ASUS Vivobook 15",
         "originalPrice":69999,
@@ -17,9 +18,10 @@
         ]
     },
         {
+        "id":"cart2",
         "mainImage":"/allImg/product-laptop/product-laptop-2.webp",
         "title":"Lenovo V15 AMD",
-        "originalPrice":44990,
+        "originalPrice":40000,
         "discount":44,
         "productQuantity":12,
         "allImages":["/allImg/product-laptop/product-laptop-2.1.webp","/allImg/product-laptop/product-laptop-2.2.webp","/allImg/product-laptop/product-laptop-2.3.webp"],
@@ -33,9 +35,10 @@
         ]
     },
         {
+        "id":"cart3",
         "mainImage":"/allImg/product-laptop/product-laptop-3.webp",
         "title":"Acer Aspire 3",
-        "originalPrice":32999,
+        "originalPrice":39999,
         "discount":51,
         "allImages":["/allImg/product-laptop/product-laptop-3.1.webp","/allImg/product-laptop/product-laptop-3.2.webp","/allImg/product-laptop/product-laptop-3.3.webp"],
         "productQuantity":15,
@@ -49,9 +52,10 @@
         ]
     },
         {
+        "id":"cart4",
         "mainImage":"/allImg/product-laptop/product-laptop-4.webp",
         "title":"HP 15 G9",
-        "originalPrice":74990,
+        "originalPrice":79990,
         "discount":52,
         "allImages":["/allImg/product-laptop/product-laptop-1.1.webp","/allImg/product-laptop/product-laptop-1.2.webp","/allImg/product-laptop/product-laptop-4.3.webp"],
         "productQuantity":10,
@@ -65,6 +69,7 @@
         ]
     },
         {
+        "id":"cart5",
         "mainImage":"/allImg/product-laptop/product-laptop-5.webp",
         "title":"DELL Inspiron 5430",
         "originalPrice":55000,
@@ -81,9 +86,10 @@
         ]
     },
         {
+        "id":"cart6",
         "mainImage":"/allImg/product-laptop/product-laptop-6.webp",
         "title":"HP 255 G10",
-        "originalPrice":26990,
+        "originalPrice":49999,
         "discount":19,
         "allImages":["/allImg/product-laptop/product-laptop-6.1.webp","/allImg/product-laptop/product-laptop-6.2.webp","/allImg/product-laptop/product-laptop-6.3.webp"],
         "productQuantity":20,
@@ -97,9 +103,10 @@
         ]
     },
         {
+        "id":"cart7",
         "mainImage":"/allImg/product-laptop/product-laptop-7.webp",
         "title":"Acer Aspire 7 ",
-        "originalPrice":52900,
+        "originalPrice":50999,
         "discount":30,
         "allImages":["/allImg/product-laptop/product-laptop-7.1.webp","/allImg/product-laptop/product-laptop-7.2.webp","/allImg/product-laptop/product-laptop-7.3.webp"],
         "productQuantity":16,
@@ -113,9 +120,10 @@
         ]
     },
         {
+        "id":"cart8",
         "mainImage":"/allImg/product-laptop/product-laptop-8.webp",
         "title":"HP Pavilion Intel",
-        "originalPrice":25390,
+        "originalPrice":25000,
         "discount":15,
         "allImages":["/allImg/product-laptop/product-laptop-8.1.webp","/allImg/product-laptop/product-laptop-8.2.webp","/allImg/product-laptop/product-laptop-8.3.webp"],
         "productQuantity":30,

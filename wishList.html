@@ -14,6 +14,20 @@
 
   <link rel="stylesheet" href="./src/style.css">
 
+  <style>
+    .wishlist-add-to-cart-btn {
+  padding: 8px 14px;
+  background-color: #4b31ec;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.wishlist-add-to-cart-btn:hover {
+  background-color: #3923c2;
+}
+  </style>
 </head>
 
 
@@ -51,8 +65,8 @@
             <span class="icons-text">Like</span>
             <div class="like-count flex-center" id="wishCount">0</div>
           </li>
-          </a>
-          <a href="./cart.html" target="_blank">
+        </a>
+          <a href="./cart.html">
             <li class="cart-li">
               <i class="fa-solid fa-cart-plus"></i>
               <span class="icons-text">Cart</span>
@@ -143,23 +157,24 @@
       </div>
     </nav>
   </header>
+  
   <!-- This is for NabBar -->
   <div class="container">
-    <div id="laptopCartItemDetail">
-      <div class="cart-container">
-        <h1>Your Cart</h1>
+    <div id="" style="display: flex; align-items: center; justify-content: center;">
+      <div class="cart-container" style="max-width: 1100px; margin-bottom: 30px;">
+        <h1>Your WishList</h1>
 
         <div class="cart-header">
           <div>Product</div>
           <div>Title / Specs</div>
           <div style="text-align: center;">Price</div>
           <div style="text-align: center;">Quantity</div>
-          <div style="text-align: center;">Delete</div>
+          <div style="text-align: center;">Shop Now</div>
         </div>
 
-        <div class="cart-items">
+        <div class=" wish-items">
 
-          <div id="defaultCart" style="display: none; justify-content: center; align-items: center;
+          <div id="defaultWishList" style="display: none; justify-content: center; align-items: center;
         margin-top: 30px;">
             <div style="text-align: center; padding: 40px; border-radius: 20px; width: 800px;">
               <img src="./public/video-logo/cart-impt.webp" alt="Empty Cart" style="width: 120px; margin-bottom: 20px;">
@@ -174,34 +189,6 @@
         </div>
       </div>
 
-      <div class="summary">
-        <h2>Order Summary</h2>
-        <div class="summary-row subtotal-price">
-          <span>Subtotal:</span>
-          <span id="laptopSubtotal" style="font-weight: 700;">₹2394</span>
-        </div>
-
-        <div class="summary-row">
-          <span>SGST:</span>
-          <span>9%</span>
-          <span id="SGST">1800</span>
-        </div>
-        <div class="summary-row">
-          <span>CGST:</span>
-          <span>9%</span>
-          <span id="CGST">1800</span>
-        </div>
-        <div class="summary-row">
-          <span>Delivery:</span>
-          <span id="delivery">50</span>
-        </div>
-        <div class="coupon">Add coupon code →</div>
-        <div class="summary-row total-price" style="font-weight: bold;">
-          <span>Total</span>
-          <span id="finalTotalPrice">₹2394</span>
-        </div>
-        <button class="checkout">Proceed to Checkout</button>
-      </div>
     </div>
   </div>
 
@@ -275,8 +262,10 @@
   </footer>
 
 
-  <script type="module" src="./src/products/showCardItemsDetail"></script>
+  <script type="module" src="./src/products/showWishListItem.js"></script>
+  <!-- <script type="module" src="./src/products/addToCart.js"></script> -->
   <script type="module" src="./src/main.js"></script>
+  
 
   
   

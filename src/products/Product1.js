@@ -1,16 +1,20 @@
+import { animateItemSection, animateNewItems } from "../animations.js";
+
+
 const products1Template = document.querySelector("#products-1--template")
 const item1 = document.querySelector(".items-1")
 
+animateItemSection();
 
 export const showProducts1Content = (product) => {
-    if (!product) {
-        return false;
-    }
-    product.forEach(currentProduct => {
-        const { itemId, imgUrl, deal, title, offIn, off } = currentProduct;
+  if (!product) {
+    return false;
+  }
+  product.forEach(currentProduct => {
+    const { itemId, imgUrl, deal, title, offIn, off } = currentProduct;
 
 
-        item1.innerHTML += `
+    item1.innerHTML += `
          <div class="item-1 flex-center">
           <div class="item-1--image">
            <img src="${imgUrl}" alt="product img" id="product-img">
@@ -36,6 +40,7 @@ export const showProducts1Content = (product) => {
       </div>
         `
 
-    });
+  });
 
+  // animateNewItems(newElements);
 }

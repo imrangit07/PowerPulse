@@ -6,7 +6,9 @@ const LoadPage = ()=>{
     const currentUser = document.querySelector("#current-user");
    //  console.log(userName);
     currentUser.innerHTML=user.userName;
+    
    }
+   
 }
 document.addEventListener("load",LoadPage)
 export default LoadPage;

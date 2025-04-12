@@ -1,5 +1,7 @@
+
 import { addToCart } from "./addToCart";
 import { productQuantity } from "./productQuantityToggle";
+import {  wishListItem } from "./wishListItems";
 
 
 const laptopTemplate = document.querySelector("#product-2--template");
@@ -68,19 +70,14 @@ const ShowProductDetail = (data) => {
         let card = e.target.closest(".product-card");
 
         const cardId = card.getAttribute("id");
-        
+
         console.log(data);
-    
-console.log("This is cardId : " +cardId);
-// console.log(data.id);
 
-
+        // console.log("This is cardId : " +cardId);
+        // console.log(data.id);
 
         const cardDetails = data.find(data => `card${data.id}` == cardId);
-        // console.log("find : "+cardDetails);
 
-        // location.href=`./Laptop.html`;
-        // console.log(cardDetails.mainImage);
 
 
         const displayNone = document.querySelectorAll(".displayNone");
@@ -94,8 +91,8 @@ console.log("This is cardId : " +cardId);
 
 
         const fullDetailProductClone = fullDetailProductTemp.content.cloneNode(true);
-        console.log(fullDetailProductClone);
-
+        // console.log(fullDetailProductClone);
+        fullDetailProductClone.querySelector("#wishList").setAttribute("id", `${cardDetails.id}`)
         fullDetailProductClone.querySelector("#mainDetailImage").src = cardDetails.mainImage;
         fullDetailProductClone.querySelector("#detailThumbnail1").src = cardDetails.allImages[0];
         fullDetailProductClone.querySelector("#detailThumbnail2").src = cardDetails.allImages[1];
@@ -120,30 +117,30 @@ console.log("This is cardId : " +cardId);
 
 
 
-        fullDetailProductClone.querySelector("#detailThumbnail1").addEventListener("mouseenter",()=>{
-            document.querySelector("#mainDetailImage").src =cardDetails.allImages[0];
-    
-            })
-            fullDetailProductClone.querySelector("#detailThumbnail1").addEventListener("mouseleave",()=>{
-            document.querySelector("#mainDetailImage").src =cardDetails.mainImage;
-            })
-    
-            fullDetailProductClone.querySelector("#detailThumbnail2").addEventListener("mouseenter",()=>{
-            document.querySelector("#mainDetailImage").src =cardDetails.allImages[1];
-    
-            })
-            fullDetailProductClone.querySelector("#detailThumbnail2").addEventListener("mouseleave",()=>{
-            document.querySelector("#mainDetailImage").src =cardDetails.mainImage;
-            })
-    
-            fullDetailProductClone.querySelector("#detailThumbnail3").addEventListener("mouseenter",()=>{
-            document.querySelector("#mainDetailImage").src =cardDetails.allImages[2];
-    
-            })
-            fullDetailProductClone.querySelector("#detailThumbnail3").addEventListener("mouseleave",()=>{
-            document.querySelector("#mainDetailImage").src =cardDetails.mainImage;
-            })
-    
+        fullDetailProductClone.querySelector("#detailThumbnail1").addEventListener("mouseenter", () => {
+            document.querySelector("#mainDetailImage").src = cardDetails.allImages[0];
+
+        })
+        fullDetailProductClone.querySelector("#detailThumbnail1").addEventListener("mouseleave", () => {
+            document.querySelector("#mainDetailImage").src = cardDetails.mainImage;
+        })
+
+        fullDetailProductClone.querySelector("#detailThumbnail2").addEventListener("mouseenter", () => {
+            document.querySelector("#mainDetailImage").src = cardDetails.allImages[1];
+
+        })
+        fullDetailProductClone.querySelector("#detailThumbnail2").addEventListener("mouseleave", () => {
+            document.querySelector("#mainDetailImage").src = cardDetails.mainImage;
+        })
+
+        fullDetailProductClone.querySelector("#detailThumbnail3").addEventListener("mouseenter", () => {
+            document.querySelector("#mainDetailImage").src = cardDetails.allImages[2];
+
+        })
+        fullDetailProductClone.querySelector("#detailThumbnail3").addEventListener("mouseleave", () => {
+            document.querySelector("#mainDetailImage").src = cardDetails.mainImage;
+        })
+
 
         // This is for Toggle for product quantitys
 
@@ -158,11 +155,16 @@ console.log("This is cardId : " +cardId);
         });
 
 
-        fullDetailProductClone.querySelector("#addToCart").addEventListener("click",(e)=>{
-          addToCart(e,cardDetails.id,cardDetails.productQuantity)
+        fullDetailProductClone.querySelector("#addToCart").addEventListener("click", (e) => {
+            addToCart( cardDetails.id)
         })
 
         fullDetailProduct.append(fullDetailProductClone);
+
+
+        wishListItem()
+        // isWishlist()
+
 
     });
 }
