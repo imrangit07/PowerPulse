@@ -11,6 +11,7 @@ const addLaptop = document.querySelector("#add-laptop");
 
 
 
+
 // This is for get AllProducts data 
 const getLaptopData = async () => {
     try {
@@ -41,7 +42,7 @@ const RenderProduct = (product) => {
     }
     // console.log(product);
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 24; i++) {
         const LaptopClone = laptopTemplate.content.cloneNode(true);
         //    console.log(laptopTemplate);
 
@@ -52,7 +53,8 @@ const RenderProduct = (product) => {
         LaptopClone.querySelector("#laptop-original--price").innerText = `₹${product[i].originalPrice}`;
         LaptopClone.querySelector("#laptop-current--price").innerText = `₹${(Math.floor(product[i].originalPrice - (product[i].originalPrice * product[i].discount) / 100))}`;
         LaptopClone.querySelector("#laptop-discount").innerText = `${product[i].discount} %`;
-        addLaptop.append(LaptopClone)
+        addLaptop.append(LaptopClone);
+
 
     }
 };

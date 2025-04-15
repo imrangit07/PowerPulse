@@ -9,11 +9,16 @@ import getLaptopData from './products/Laptops.js';
 import products1 from "./Api/Products1.json";
 import { showProducts1Content } from './products/Product1';
 
+
+
 // for GSAP
 import {
     animateHeader,
     popupMainTopSection,
 } from "./animations.js";
+import Checkout from './Components/Checkout.js';
+import postShippingInfo from './Components/postShippingInfo.js';
+import { paymentSuccess } from './Components/paymentSuccess.js';
 
 
 LoadPage();
@@ -23,13 +28,17 @@ UserSignup();
 UserLogin();
 UserLogout();
 getLaptopData();
+Checkout()
+// paymentSuccess()
+// postShippingInfo()
+
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
     animateHeader();
     popupMainTopSection();
-   
+
 });
 
 

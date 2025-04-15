@@ -1,15 +1,20 @@
 import { getWishListLs } from "./getWishListLs"
+import { showWishListCount } from "./wishListItems";
 
-export const removeWishListItem = (id)=>{
-let localStorageWishlist = getWishListLs();
+export const removeWishListItem = (id) => {
 
-localStorageWishlist=localStorageWishlist.filter((curWish)=>curWish.cardId !==id);
+    let localStorageWishlist = getWishListLs();
 
-localStorage.setItem("wishList", JSON.stringify(localStorageWishlist))
+    localStorageWishlist = localStorageWishlist.filter((curWish) => curWish.cardId !== id);
 
-let removeWish = document.querySelector(`#${id}`)
+    localStorage.setItem("wishList", JSON.stringify(localStorageWishlist))
 
-if(removeWish){
-    removeWish.remove();
-}
+    let removeWish = document.querySelector(`#${id}`)
+
+    if (removeWish) {
+        removeWish.remove();
+    }
+    showWishListCount()
+
+
 }

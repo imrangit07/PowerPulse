@@ -14,6 +14,92 @@
 
   <link rel="stylesheet" href="./src/style.css">
 
+  <style>
+    #checkoutDisplayNone {
+      display: none;
+      width: 100vw;
+      height: calc(100% - 76px);
+      position: absolute;
+      top: 76px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      /* width: fit-content; */
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .checkout-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+      min-width: 48%;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #4b31ec;
+      border: none;
+      color: white;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background-color: #4b31ec;
+    }
+
+    @media (max-width: 600px) {
+      .form-row .form-group {
+        min-width: 100%;
+      }
+    }
+
+
+
+  </style>
+
 </head>
 
 
@@ -46,11 +132,11 @@
             </span>
           </li>
           <a href="./wishList.html">
-          <li class="like-li">
-            <i class="fa-regular fa-heart"></i>
-            <span class="icons-text">Like</span>
-            <div class="like-count flex-center" id="wishCount">0</div>
-          </li>
+            <li class="like-li">
+              <i class="fa-regular fa-heart"></i>
+              <span class="icons-text">Like</span>
+              <div class="like-count flex-center" id="wishCount">0</div>
+            </li>
           </a>
           <a href="./cart.html" target="_blank">
             <li class="cart-li">
@@ -143,6 +229,10 @@
       </div>
     </nav>
   </header>
+
+
+
+
   <!-- This is for NabBar -->
   <div class="container">
     <div id="laptopCartItemDetail">
@@ -200,8 +290,117 @@
           <span>Total</span>
           <span id="finalTotalPrice">₹2394</span>
         </div>
-        <button class="checkout">Proceed to Checkout</button>
+        <button class="checkout" id="Checkout">Proceed to Checkout</button>
       </div>
+    </div>
+
+  </div>
+
+
+  <!-- This is for Checkout display  -->
+  <div id="checkoutDisplayNone">
+    <div class="checkout-container">
+      <h2>Shipping Information</h2>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" required />
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pincode">Pin Code</label>
+            <input type="text" id="pincode" required />
+          </div>
+
+          <div class="form-group">
+            <label for="landmark">Landmark</label>
+            <input type="text" id="landmark" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="area">Area / Street</label>
+          <input type="text" id="area" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" pattern="[0-9]{10}" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <button type="submit" class="checkout-btn"> Payment</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="checkoutDisplayNone">
+    <div class="checkout-container">
+      <h2>Shipping Information</h2>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" required />
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pincode">Pin Code</label>
+            <input type="text" id="pincode" required />
+          </div>
+
+          <div class="form-group">
+            <label for="landmark">Landmark</label>
+            <input type="text" id="landmark" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="area">Area / Street</label>
+          <input type="text" id="area" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" pattern="[0-9]{10}" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required />
+        </div>
+
+        <button type="submit" id="paymentBtn"> Payment</button>
+      </form>
     </div>
   </div>
 
@@ -277,9 +476,10 @@
 
   <script type="module" src="./src/products/showCardItemsDetail"></script>
   <script type="module" src="./src/main.js"></script>
+  <!-- <script type="module" src="./src/Components/Checkout.js"></script> -->
 
-  
-  
+
+
 
 </body>
 

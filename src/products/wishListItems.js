@@ -1,5 +1,6 @@
 import getData from "./getData";
 import { getWishListLs } from "./getWishListLs";
+import { removeWishListItem } from "./removeWishListItem";
 
 const wishCountElement = document.querySelector("#wishCount");
 const localStorageWishList = getWishListLs()
@@ -34,7 +35,7 @@ const wishListItem = async () => {
         let existingItem = localStorageWishList.find((item) => item.cardId === cardId);
 
         if (existingItem) {
-            alert("This Item is Already Exists.")
+          alert("This Item is Already Exists.")
             return false;
         }
 

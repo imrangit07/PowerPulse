@@ -28,6 +28,4 @@ export const cartTotalPrice=()=>{
     SGST.textContent = `₹${tax}`;
     deliveryFee.textContent= `₹${delivery}`;
     finalTotalPrice.textContent = `₹${tolalItemPrice + tax + tax + delivery}`;
-    
-   
 }
