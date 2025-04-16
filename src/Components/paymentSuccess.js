@@ -1,7 +1,27 @@
+import { getLocalStorageCart } from "../products/getLocalStorageCart";
+import { OrderDetail } from "./OrderDetails";
+
 
 export const paymentSuccess = document.addEventListener('DOMContentLoaded', function () {
     const orderNumberEl = document.getElementById('order-number');
     const orderDateEl = document.getElementById('order-date');
+    const totalAmount = document.getElementById('total-amount');
+
+    let localStorageItem = getLocalStorageCart();
+    console.log(localStorageItem);
+    let initialVal = 0;
+
+    let tolalItemPrice = localStorageItem.reduce((accum, curItem) => {
+        let itemPrice = parseInt(curItem.itemPrice) || 0;
+
+        return itemPrice + accum;
+
+    }, initialVal)
+    // This is for show total amount
+    let tax = Math.floor((tolalItemPrice * 9) / 100);
+    let delivery = (tolalItemPrice<1)?tolalItemPrice:50;
+
+    totalAmount.innerHTML = `₹${tolalItemPrice + tax + tax + delivery}`;
 
     if (orderNumberEl && orderDateEl) {
         // Generate random order number
@@ -15,19 +35,18 @@ export const paymentSuccess = document.addEventListener('DOMContentLoaded', func
 
         // Start confetti effect
         createConfetti();
+        // OrderDetail(localStorageItem)
     }
 });
 
 
-function continueShopping() {
-    alert('Redirecting to home page...');
-    // In a real app: window.location.href = '/';
-}
+// function continueShopping() {
+//     alert('Redirecting to home page...');
+// }
 
-function viewOrder() {
-    alert('Redirecting to order details...');
-    // In a real app: window.location.href = '/orders/' + document.getElementById('order-number').textContent;
-}
+// function viewOrder() {
+//     alert('Redirecting to order details...');
+// }
 
 function createConfetti() {
     const colors = ['#4CAF50', '#2196F3', '#FFC107', '#FF5722', '#9C27B0'];
@@ -65,7 +84,9 @@ function animateConfetti(element) {
 
 
 
-    // setTimeout(() => {
-    //     location.href = "./"
-    // }, 7000)
+    setTimeout(() => {
+        // location.href = "./order.html";
+        location.href = "./index.html";
+        // OrderDetail()
+    }, 7000)
 }

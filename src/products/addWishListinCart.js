@@ -26,7 +26,23 @@ export const addWishListinCart = (id) => {
     console.log("existingItem " +existingItem);
     
     if (existingItem) {
-        alert("This Item is Already Exists.")
+          
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-right",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+    Toast.fire({
+        icon: "info",
+        title: `${id} - This Item is Already Exists.`
+      });
         return false;
     }
 

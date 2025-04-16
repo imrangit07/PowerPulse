@@ -40,14 +40,48 @@ export const addToCart = (id) => {
 
     }
     if (existingItem) {
-        alert("This Item is Already Exists.")
+        // alert("This Item is Already Exists.")
+
+         
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-right",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+    Toast.fire({
+        icon: "info",
+        title: `${id} - This Item is Already Exists.`
+      }); 
         return false;
     }
     localStorageItem.push({ cartId, itemPrice, itemQuantity });
 
     localStorage.setItem("cartItems", JSON.stringify(localStorageItem))
 
+    
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-right",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+    Toast.fire({
+        icon: "success",
+        title: `${id} - Cart Added Successfully`
+      }); 
 
     // console.log(localStorageItem);
 

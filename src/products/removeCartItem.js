@@ -29,6 +29,23 @@ const removeCartItem=(id)=>{
         console.log(removeItem);
         
         removeItem.remove();
+
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-center",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            // didOpen: (toast) => {
+            //   toast.onmouseenter = Swal.stopTimer;
+            //   toast.onmouseleave = Swal.resumeTimer;
+            // }
+          });
+        Toast.fire({
+            icon: "warning",
+            title: `${id} - Item deleted successfully.`
+          });   
     }
     
     console.log(localStorageItem);

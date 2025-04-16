@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cart</title>
+  <title>PowerPuls</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -354,7 +354,7 @@
   <div id="checkoutDisplayNone">
     <div class="checkout-container">
       <h2>Shipping Information</h2>
-      <form id="checkoutForm">
+      <form id="updateCheckoutForm">
         <div class="form-group">
           <label for="fullName">Full Name</label>
           <input type="text" id="fullName" required />
@@ -363,43 +363,43 @@
         <div class="form-row">
           <div class="form-group">
             <label for="city">City</label>
-            <input type="text" id="city" required />
+            <input type="text" id="updateCity" required />
           </div>
 
           <div class="form-group">
             <label for="state">State</label>
-            <input type="text" id="state" required />
+            <input type="text" id="updateState" required />
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="pincode">Pin Code</label>
-            <input type="text" id="pincode" required />
+            <input type="text" id="updatePincode" required />
           </div>
 
           <div class="form-group">
             <label for="landmark">Landmark</label>
-            <input type="text" id="landmark" />
+            <input type="text" id="updateLandmark" />
           </div>
         </div>
 
         <div class="form-group">
           <label for="area">Area / Street</label>
-          <input type="text" id="area" required />
+          <input type="text" id="updateArea" required />
         </div>
 
         <div class="form-group">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" pattern="[0-9]{10}" required />
+          <input type="tel" id="updatePhone" pattern="[0-9]{10}" required />
         </div>
 
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" required />
+          <input type="email" id="updateEmail" required />
         </div>
 
-        <button type="submit" id="paymentBtn"> Payment</button>
+        <button type="submit" id="updatePaymentBtn"> Payment</button>
       </form>
     </div>
   </div>
@@ -472,8 +472,9 @@
       </div>
     </div>
   </footer>
-
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="module" src="./src/products/showCardItemsDetail"></script>
   <script type="module" src="./src/main.js"></script>
   <!-- <script type="module" src="./src/Components/Checkout.js"></script> -->

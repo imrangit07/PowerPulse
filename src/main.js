@@ -19,7 +19,7 @@ import {
 import Checkout from './Components/Checkout.js';
 import postShippingInfo from './Components/postShippingInfo.js';
 import { paymentSuccess } from './Components/paymentSuccess.js';
-
+import { OrderDetail } from './Components/OrderDetails.js';
 
 LoadPage();
 Toggle();
@@ -29,6 +29,7 @@ UserLogin();
 UserLogout();
 getLaptopData();
 Checkout()
+OrderDetail();
 // paymentSuccess()
 // postShippingInfo()
 

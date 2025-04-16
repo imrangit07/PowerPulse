@@ -16,8 +16,8 @@ if (checkoutBtn) {
     });
 }
 
-// let userData = JSON.parse(localStorage.getItem("user"));
-// console.log(userData);
+let userData = JSON.parse(localStorage.getItem("cartItems"));
+console.log(userData);
 
 
 async function postShippingInfo() {
