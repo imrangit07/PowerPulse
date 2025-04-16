@@ -3,36 +3,36 @@ import { getLocalStorageCart } from "../products/getLocalStorageCart";
 
 
 export const OrderDetail = async (id) => {
-    let orderBox = document.querySelector('#orderBox');
+  let orderBox = document.querySelector('#orderBox');
 
-    console.log("I am from order detail");
-    let localStorageItem = getLocalStorageCart();
-    const apiData = await getData()
-    console.log(apiData);
+  console.log("I am from order detail");
+  let localStorageItem = getLocalStorageCart();
+  const apiData = await getData()
+  console.log(apiData);
 
-    // console.log(localStorageItem.cartId);
-    const matchedObjects = apiData.filter(dbItem =>
-        localStorageItem.some(localItem =>
-            localItem.cartId === dbItem.id
-        )
-    );
-    console.log("find");
+  // console.log(localStorageItem.cartId);
+  const matchedObjects = apiData.filter(dbItem =>
+    localStorageItem.some(localItem =>
+      localItem.cartId === dbItem.id
+    )
+  );
+  console.log("find");
 
 
-    console.log(matchedObjects);
+  console.log(matchedObjects);
 
-    console.log(localStorageItem);
+  console.log(localStorageItem);
 
-    matchedObjects.forEach((element) => {
-        let basePrice = Math.floor(element.originalPrice * (1 - element.discount / 100));
-        let taxRate = 9; // percent
-        let cgst = Math.floor((basePrice * taxRate) / 100);
-        let sgst = Math.floor((basePrice * taxRate) / 100);
-        let delivery = 50;
-        
-        let totalPrice = basePrice + cgst + sgst;
+  matchedObjects.forEach((element) => {
+    let basePrice = Math.floor(element.originalPrice * (1 - element.discount / 100));
+    let taxRate = 9; // percent
+    let cgst = Math.floor((basePrice * taxRate) / 100);
+    let sgst = Math.floor((basePrice * taxRate) / 100);
+    let delivery = 50;
 
-        orderBox.innerHTML += `
+    let totalPrice = basePrice + cgst + sgst;
+
+    orderBox.innerHTML += `
      <div class="order-header">
         <div class="order-meta">
           <div class="order-meta-item">
@@ -76,6 +76,6 @@ export const OrderDetail = async (id) => {
       <div class="order-footer">
         <div class="total-amount">Order Total: ₹${totalPrice} + delivery Charges</div>
       </div>`
-    })
+  })
 
 }

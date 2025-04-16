@@ -85,8 +85,8 @@ function animateConfetti(element) {
 
 
     setTimeout(() => {
-        // location.href = "./order.html";
-        location.href = "./index.html";
+        location.href = "./order.html";
+        // location.href = "./index.html";
         // OrderDetail()
     }, 7000)
 }

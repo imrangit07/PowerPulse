@@ -6,93 +6,79 @@ const wishCountElement = document.querySelector("#wishCount");
 const localStorageWishList = getWishListLs()
 
 const wishListItem = async () => {
-    console.log(localStorageWishList);
+  console.log(localStorageWishList);
 
-    const apiData = await getData();
-    // console.log("wish"+apiData);
-    const wishlist = document.querySelector("#wishlistItem");
-    wishlist.addEventListener("click", (e) => {
+  const apiData = await getData();
+  // console.log("wish"+apiData);
+  const wishlist = document.querySelector("#wishlistItem");
+  wishlist.addEventListener("click", (e) => {
 
-        wishlist.style.color = "red";
-        wishlist.classList.add("animate-pop");
+    wishlist.style.color = "red";
+    wishlist.classList.add("animate-pop");
 
-        setTimeout(() => {
-            wishlist.classList.remove("animate-pop");
-        }, 300);
+    setTimeout(() => {
+      wishlist.classList.remove("animate-pop");
+    }, 300);
 
 
-        let card = e.target.closest(".wishList")
-        console.log(card);
+    let card = e.target.closest(".wishList")
+    console.log(card);
 
-        let cardId = card.getAttribute("id")
+    let cardId = card.getAttribute("id")
 
-        console.log(cardId);
+    console.log(cardId);
 
-        // const cardDetails = apiData.find(data => `${data.id}` == cardId);
+    // const cardDetails = apiData.find(data => `${data.id}` == cardId);
 
-        // console.log(cardDetails);
+    // console.log(cardDetails);
 
-        let existingItem = localStorageWishList.find((item) => item.cardId === cardId);
+    let existingItem = localStorageWishList.find((item) => item.cardId === cardId);
 
-        if (existingItem) {
-          // alert("This Item is Already Exists.")
+    if (existingItem) {
+      // alert("This Item is Already Exists.")
 
-          
-         
 
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-right",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      }
-    });
-  Toast.fire({
-      icon: "info",
-      title: ` This Item is Already Exists.`
-    });
-            return false;
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-right",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
         }
+      });
+      Toast.fire({
+        icon: "info",
+        title: ` This Item is Already Exists.`
+      });
+      return false;
+    }
 
-        // isExistingWishItem(cardId)
-        localStorageWishList.push({ cardId: cardId });
+    // isExistingWishItem(cardId)
+    localStorageWishList.push({ cardId: cardId });
 
-        localStorage.setItem("wishList", JSON.stringify(localStorageWishList))
-        showWishListCount()
-       
+    localStorage.setItem("wishList", JSON.stringify(localStorageWishList))
+    showWishListCount()
 
-    })
+
+  })
 
 }
 
 
-// const isWishlist= ()=>{
+const showWishListCount = () => {
+  console.log(localStorageWishList.length);
 
-//    let wishListID = document.querySelector(".wishlist-icon");
-//    console.log(wishListID);
-   
-//    const wishlist = document.querySelector("#wishlistItem");
-       
-  
-//         wishlist.style.color = "red";
-
-// }
-
-const showWishListCount = ()=>{
-    console.log(localStorageWishList.length);
-    
 
   if (wishCountElement) {
     wishCountElement.innerText = localStorageWishList.length;
-  }else{
+  } else {
     console.log("wishCountElement Not Found");
-    
+
   }
 }
 
 
-export {wishListItem,showWishListCount}
+export { wishListItem, showWishListCount }

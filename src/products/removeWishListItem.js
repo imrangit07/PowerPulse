@@ -14,7 +14,5 @@ export const removeWishListItem = (id) => {
     if (removeWish) {
         removeWish.remove();
     }
-    showWishListCount()
-
-
+    showWishListCount();
 }
