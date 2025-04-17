@@ -44,7 +44,11 @@ const UserLogout = ()=>{
     const Logout = document.querySelector("#logout");
     const handelLogout = ()=>{
         localStorage.removeItem("user")
-        alert("User Logout Successfully!")
+
+        // alert("User Logout Successfully!")
+
+        Swal.fire("User Logout Successfully!");
+        
         window.location.href = "http://localhost:5173/";
 
     }

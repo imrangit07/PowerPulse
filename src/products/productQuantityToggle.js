@@ -17,6 +17,6 @@ export const productQuantity = (e,stock)=>{
         }
     }
     else {
-        outStock.textContent = `Item is Out of Stock!`;
+        outStock.textContent = `The Item is Out of Stock! We Have only ${stock} Left.`;
     }
 }
