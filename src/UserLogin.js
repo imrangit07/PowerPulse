@@ -30,7 +30,7 @@ const UserLogin = () => {
         }
 
         if ((userName === userId || email === userId) && (password === userpassword)) {
-            window.location.href = "http://localhost:5173/";
+            window.location.href = "./index";
         }
 
 
