@@ -1,4 +1,4 @@
-import './public/style.css';
+import '../public/style.css';
 import './AutoSwiper.js';
 import Toggle from './Toggle.js';
 import ToggleLogin from './ToggleLogin.js';
