@@ -46,7 +46,7 @@ export const addToCart = (id) => {
 
     const Toast = Swal.mixin({
         toast: true,
-        position: "top-right",
+        position: "bottom-right",
         showConfirmButton: false,
         timer: 3000,
         timerProgressBar: true,
@@ -69,7 +69,7 @@ export const addToCart = (id) => {
 
     const Toast = Swal.mixin({
         toast: true,
-        position: "top-right",
+        position: "bottom-right",
         showConfirmButton: false,
         timer: 2000,
         timerProgressBar: true,
