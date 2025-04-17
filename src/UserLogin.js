@@ -30,7 +30,7 @@ const UserLogin = () => {
         }
 
         if ((userName === userId || email === userId) && (password === userpassword)) {
-            window.location.href = "./index";
+            window.location.href = "./index.html";
         }
 
 
@@ -49,7 +49,7 @@ const UserLogout = ()=>{
 
         Swal.fire("User Logout Successfully!");
         
-        window.location.href = "/index";
+        window.location.href = "./index.html";
 
     }
 
