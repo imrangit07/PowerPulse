@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="shortcut icon" href="./video-logo/fabIcon.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="./public/video-logo/fabIcon.webp" type="image/x-icon">
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./src/style.css">
 
   <style>
     .wishlist-add-to-cart-btn {
@@ -32,14 +32,15 @@
 
 
 <body>
+
   <!-- This is for NabBar -->
   <header>
     <nav class="navbar flex-center">
       <div class="nav-logo">
-        <a href="../index.html">
+        <a href="./index.html">
           <div class="video-crop-container">
             <video controls autoplay muted loop>
-              <source src="./video-logo/PowerPuls.mp4" type="video/mp4">
+              <source src="public/video-logo/PowerPuls.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
@@ -59,12 +60,12 @@
             </span>
           </li>
           <a href="./wishList.html">
-            <li class="like-li">
-              <i class="fa-regular fa-heart"></i>
-              <span class="icons-text">Like</span>
-              <div class="like-count flex-center" id="wishCount">0</div>
-            </li>
-          </a>
+          <li class="like-li">
+            <i class="fa-regular fa-heart"></i>
+            <span class="icons-text">Like</span>
+            <div class="like-count flex-center" id="wishCount">0</div>
+          </li>
+        </a>
           <a href="./cart.html">
             <li class="cart-li">
               <i class="fa-solid fa-cart-plus"></i>
@@ -156,6 +157,7 @@
       </div>
     </nav>
   </header>
+  
   <!-- This is for NabBar -->
   <div class="container">
     <div id="" style="display: flex; align-items: center; justify-content: center;">
