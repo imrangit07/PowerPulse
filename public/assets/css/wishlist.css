@@ -1,0 +1,13 @@
+
+.wishlist-add-to-cart-btn {
+  padding: 8px 14px;
+  background-color: #4b31ec;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.wishlist-add-to-cart-btn:hover {
+  background-color: #3923c2;
+}
