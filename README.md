@@ -7,4 +7,4 @@
 
 
 
-![image alt](image_url)
+![image alt](public/assets/PowerPuls.webp)
