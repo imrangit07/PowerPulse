@@ -1706,19 +1706,19 @@ h1 {
     /* grid-area: title; */
     text-align: left;
   }
-
+/* 
   .price {
-    /* grid-area: price; */
-  }
+    grid-area: price;
+  } */
 
   .quantity-controls {
     /* grid-area: quantity; */
     justify-content: flex-start;
   }
 
-  .remove-btn {
-    /* grid-area: remove; */
-  }
+  /* .remove-btn {
+    grid-area: remove;
+  } */
 
   .cart-header div:nth-child(4),
   .cart-header div:nth-child(5) {
