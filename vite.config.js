@@ -10,8 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         cart: resolve(__dirname, 'cart.html'),
-        wishlist: resolve(__dirname, 'wishlist.html'),
-        paymentSuccess: resolve(__dirname, 'paymentsuccess.html'),
+        wishList: resolve(__dirname, 'wishList.html'),
+        paymentSuccess: resolve(__dirname, 'paymentSuccess.html'),
         order: resolve(__dirname, 'order.html')
       }
     }
