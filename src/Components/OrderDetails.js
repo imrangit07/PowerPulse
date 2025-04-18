@@ -32,15 +32,27 @@ export const OrderDetail = async (id) => {
 
     let totalPrice = basePrice + cgst + sgst;
 
+    // Set current date
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    let currentDate= today.toLocaleDateString(undefined, options);
+
+    //set Delivere Date 
+    // Set current date + 4 days
+const Doptions = { year: 'numeric', month: 'long', day: 'numeric' };
+const Dtoday = new Date();
+Dtoday.setDate(Dtoday.getDate() + 4);
+let delivereDate = Dtoday.toLocaleDateString(undefined, Doptions);
+
     orderBox.innerHTML += `
      <div class="order-header">
         <div class="order-meta">
           <div class="order-meta-item">
             <span class="meta-label">ORDER PLACED</span>
-            <span class="meta-value">10 April 2025</span>
+            <span class="meta-value">${currentDate}</span>
           </div>
           <div class="order-meta-item">
-            <span class="meta-label">TOTAL</span>
+            <span class="meta-label">PRICE</span>
             <span class="meta-value" id="metaValue">₹${totalPrice}</span>
           </div>
           <div class="order-meta-item">
@@ -48,7 +60,7 @@ export const OrderDetail = async (id) => {
             <span class="meta-value">406-6348292-1922745</span>
           </div>
         </div>
-        <span class="order-status delivered">Delivered on Apr 14, 2025</span>
+        <span class="order-status delivered">Delivered on ${delivereDate}</span>
       </div>
       
       <div class="order-content">
@@ -61,7 +73,7 @@ export const OrderDetail = async (id) => {
           <a href="#" class="product-title">${element.title}</a>
           <div class="product-seller">Sold by: PowerPuls</div>
           <div class="product-price">₹${totalPrice}</div>
-          <div class="delivery-info">Your item was <span class="delivery-date">delivered on Apr 14, 2025</span></div>
+          <div class="delivery-info">Your item was <span class="delivery-date">delivered on ${delivereDate}</span></div>
           <div class="delivery-info">Courier: BlueDart (Tracking #BD785412369IN)</div>
         </div>
         
@@ -74,7 +86,7 @@ export const OrderDetail = async (id) => {
       </div>
       
       <div class="order-footer">
-        <div class="total-amount">Order Total: ₹${totalPrice} + delivery Charges</div>
+        <div class="total-amount">Total Price: ₹${totalPrice} + delivery Charges ₹50 </div>
       </div>`
   })
 

@@ -24,18 +24,18 @@ export const paymentSuccess = document.addEventListener('DOMContentLoaded', func
     totalAmount.innerHTML = `₹${tolalItemPrice + tax + tax + delivery}`;
 
     if (orderNumberEl && orderDateEl) {
-        // Generate random order number
+      
         const orderNumber = '#' + Math.floor(Math.random() * 900000 + 100000);
         orderNumberEl.textContent = orderNumber;
 
-        // Set current date
+       
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const today = new Date();
         orderDateEl.textContent = today.toLocaleDateString(undefined, options);
 
-        // Start confetti effect
+       
         createConfetti();
-        // OrderDetail(localStorageItem)
+     
     }
 });
 

@@ -1,10 +1,42 @@
+/* This is for BASE rulse */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--second-white--color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* This is for THEMES */
+:root {
+  --main-color: #4b31ec;
+  --main-color-light: rgba(75, 49, 236, .5);
+  --second-main--color: rgb(190, 116, 201);
+  --third-main--color: rgb(48, 191, 163);
+  --main-white--color: #fff;
+  --main-black--color: #313131;
+  --light-black--color: rgba(0, 0, 0, .5);
+  --second-white--color: rgb(241, 245, 255);
+  --indicators-color: #bbb;
+}
 
 .my-orders-container {
   max-width: 1200px;
   margin: 30px auto;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  background-color: var(--main-white--color);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.05);
 }
@@ -19,7 +51,7 @@
 }
 
 .page-header h2 {
-  color: #333;
+  color: var(--main-black--color);
   margin: 0;
   font-size: 28px;
 }
@@ -31,7 +63,7 @@
 
 .filter-btn {
   padding: 8px 15px;
-  background: white;
+  background: var(--main-white--color);
   border: 1px solid #ddd;
   border-radius: 20px;
   cursor: pointer;
@@ -40,9 +72,9 @@
 }
 
 .filter-btn:hover, .filter-btn.active {
-  background: #4b31ec;
+  background: var(--main-color);
   color: white;
-  border-color: #4b31ec;
+  border-color: var(--main-color);
 }
 
 .order-box {
@@ -51,7 +83,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   margin-bottom: 25px;
-  background-color: white;
+  background-color: var(--main-white--color);
   overflow: hidden;
 }
 
@@ -60,7 +92,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #f8f9fa;
+  background-color: var(--second-white--color);
   border-bottom: 1px solid #eee;
 }
 
@@ -135,8 +167,8 @@
   position: absolute;
   top: -10px;
   right: -10px;
-  background: #ff6b6b;
-  color: white;
+  background: var(--third-main--color);
+  color: var(--main-color);
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -153,13 +185,13 @@
 
 .product-title {
   margin: 0 0 8px;
-  color: #0066c0;
+  color: var(--main-color);
   font-size: 16px;
   font-weight: 600;
 }
 
 .product-title:hover {
-  color: #c45500;
+  color: var(--main-color);
   text-decoration: underline;
 }
 
@@ -172,7 +204,7 @@
 .product-price {
   font-weight: bold;
   font-size: 16px;
-  color: #b12704;
+  color: var(--main-color);
   margin-bottom: 8px;
 }
 
@@ -240,7 +272,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 15px 20px;
-  background-color: #f8f9fa;
+  background-color: var(--second-white--color);
   border-top: 1px solid #eee;
 }
 
