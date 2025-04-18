@@ -16,131 +16,74 @@
 
 <body>
     
-      <!-- This is for NabBar -->
-  <header>
-    <nav class="navbar flex-center">
-      <div class="nav-logo">
-        <a href="./index.html">
-          <div class="video-crop-container">
-            <video controls autoplay muted loop>
-              <source src="./assets/img/video-logo/PowerPuls.mp4" type="video/mp4">
-
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </a>
-      </div>
-      <div class="nav-search--input flex-center">
-        <input type="search" placeholder="Search for Any Type fo Products" class="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div>
-      <div class="nav-items">
-        <ul>
-          <li class="login-li" id="login-li">
-            <i class="fa-regular fa-user"></i>
-            <span id="current-user">
-              <span class="icons-text">Login</span>
-              <i class="fa-solid fa-angle-up angle-arrow icons-text"></i>
-            </span>
-          </li>
-          <a href="./wishList.html">
-            <li class="like-li">
-              <i class="fa-regular fa-heart"></i>
-              <span class="icons-text">Like</span>
-              <div class="like-count flex-center" id="wishCount">0</div>
-            </li>
-          </a>
-          <a href="./cart.html" target="_blank">
-            <li class="cart-li">
-              <i class="fa-solid fa-cart-plus"></i>
-              <span class="icons-text">Cart</span>
-              <div class="cart-count flex-center" id="cartCoutn">0</div>
-            </li>
-          </a>
-
-        </ul>
-      </div>
-
-      <!-- This is for login or signup page -->
-
-      <div class="login-signup" id="login-signup--forms">
-        <div class="login-signup--container" id="login-signup--container">
-          <div class="toggle-container">
-            <button class="toggle-btn active" id="loginBtn">Login</button>
-            <button class="toggle-btn" id="signupBtn">Sign Up</button>
-          </div>
-
-          <div class="form-container login-form">
-            <form>
-              <h2>Welcome Back</h2>
-              <div class="input-group">
-                <label for="" id="user-id-err"></label>
-                <input type="text" placeholder="Email or Username" id="user-email--username" required>
-              </div>
-              <div class="input-group">
-                <label for="" id="user-pass-err"></label>
-                <input type="password" placeholder="Password" id="user-password" required>
-              </div>
-              <button type="submit" class="btn" id="user-login">Login</button>
-              <div class="forgot-password">
-                <a href="#" id="logout">Logout</a>
-
-                <a href="#">Forgot password?</a>
-              </div>
-              <div class="social-login">
-                <p>or continue with</p>
-                <div class="social-icons">
-                  <div class="social-icon">
-                    <i class="fa-brands fa-facebook"></i>
-                  </div>
-                  <div class="social-icon">
-                    <i class="fa-brands fa-google"></i>
-                  </div>
-                  <div class="social-icon">
-                    <i class="fa-brands fa-google-play"></i>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <div class="form-container signup-form">
-            <form>
-              <h2>Create Account</h2>
-              <div class="input-group">
-                <label for="" id="userName-err"></label>
-                <input type="text" placeholder="Full Name" id="userName" required>
-              </div>
-              <div class="input-group">
-                <label for="" id="userEmail-err"></label>
-                <input type="email" placeholder="Email Address" id="userEmail" required>
-              </div>
-              <div class="input-group">
-                <label for="" id="userPassword-err"></label>
-                <input type="password" placeholder="Password" id="userPassword" required>
-              </div>
-
-              <button type="submit" class="btn" id="signup-submit--btn">Sign Up</button>
-              <div class="social-login">
-                <p>or sign up with</p>
-                <div class="social-icons">
-                  <div class="social-icon">
-                    <i class="fa-brands fa-facebook"></i>
-                  </div>
-                  <div class="social-icon">
-                    <i class="fa-brands fa-google"></i>
-                  </div>
-                  <div class="social-icon">
-                    <i class="fa-brands fa-google-play"></i>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-section about">
+        <div class="footer-icon">
+          <img src="./assets/img/video-logo/footer-icon.webp" alt="">
+          <h2> PowerPuls</h2>
+        </div>
+        <p>Your one-stop destination for electronics, gadgets, and more.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-    </nav>
-  </header>
+  
+      <div class="footer-section links">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">SmartPhones</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Watchs</a></li>
+          <li><a href="#">HeadPhones</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section links">
+        <h3>Customer Support</h3>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Warranty Policy</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe for latest tech updates and deals!</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="footer-middle">
+      <div class="payments">
+        <p>We Accept:</p>
+        <img src="./assets/img/video-logo/visa.webp" alt="Visa">
+        <img src="./assets/img/video-logo/mastercard.webp" alt="MasterCard">
+        <img src="./assets/img/video-logo/paypal.webp" alt="PayPal">
+        <img src="./assets/img/video-logo/apple-pay.webp" alt="Apple Pay">
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 PowerPuls. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </footer>
 
 
 
