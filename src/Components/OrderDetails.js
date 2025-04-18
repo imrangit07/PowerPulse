@@ -30,12 +30,13 @@ export const OrderDetail = async (id) => {
     const quantity = localItem ? localItem.itemQuantity : 1;
 
     let basePrice = Math.floor(element.originalPrice * (1 - element.discount / 100));
+    let totalPrice = (basePrice * quantity);
     let taxRate = 9; // percent
-    let cgst = Math.floor((basePrice * taxRate) / 100);
-    let sgst = Math.floor((basePrice * taxRate) / 100);
+    let cgst = Math.floor((totalPrice * taxRate) / 100);
+    let sgst = Math.floor((totalPrice * taxRate) / 100);
     let delivery = 50;
 
-    let totalPrice = (basePrice * quantity);
+    
 
     // Set current date
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
