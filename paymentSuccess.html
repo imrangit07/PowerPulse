@@ -2,54 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerPuls</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PowerPuls</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="./assets/img/video-logo/fabIcon.webp" type="image/x-icon">
-   <link rel="stylesheet" href="./assets/css/payment.css">
-   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/img/video-logo/fabIcon.webp" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/payment.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div id="paymentSuccessNone">
-        <div class="success-container">
-            <div class="checkmark-circle">
-                <div class="checkmark">✓</div>
-            </div>
-            <h1>Payment Successful!</h1>
-            <p>Thank you for your purchase. Your order has been confirmed and will be processed shortly.</p>
 
-            <div class="order-details">
-                <div class="detail-row">
-                    <span class="detail-label">Order Number:</span>
-                    <span class="detail-value" id="order-number">#123456</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Date:</span>
-                    <span class="detail-value" id="order-date">June 15, 2023</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Payment Method:</span>
-                    <span class="detail-value" id="payment-method">Credit Card</span>
-                </div>
-                <div class="detail-row total">
-                    <span class="detail-label">Total Paid:</span>
-                    <span class="detail-value" id="total-amount">$129.99</span>
-                </div>
-            </div>
+  <!-- This is for NabBar -->
+  <header>
+    <nav class="navbar flex-center">
+      <div class="nav-logo">
+        <a href="./index.html">
+          <div class="video-crop-container">
+            <video controls autoplay muted loop>
+              <source src="./assets/img/video-logo/PowerPuls.mp4" type="video/mp4">
 
-            <!-- <div class="buttons">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </a>
+      </div>
+      <div class="nav-search--input flex-center">
+        <input type="search" placeholder="Search for Any Type fo Products" class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li class="login-li" id="login-li">
+            <i class="fa-regular fa-user"></i>
+            <span id="current-user">
+              <span class="icons-text">Login</span>
+              <i class="fa-solid fa-angle-up angle-arrow icons-text"></i>
+            </span>
+          </li>
+          <a href="./wishList.html">
+            <li class="like-li">
+              <i class="fa-regular fa-heart"></i>
+              <span class="icons-text">Like</span>
+              <div class="like-count flex-center" id="wishCount">0</div>
+            </li>
+          </a>
+          <a href="./cart.html">
+            <li class="cart-li">
+              <i class="fa-solid fa-cart-plus"></i>
+              <span class="icons-text">Cart</span>
+              <div class="cart-count flex-center" id="cartCoutn">0</div>
+            </li>
+          </a>
+
+        </ul>
+      </div>
+
+      <!-- This is for login or signup page -->
+
+      <div class="login-signup" id="login-signup--forms">
+        <div class="login-signup--container" id="login-signup--container">
+          <div class="toggle-container">
+            <button class="toggle-btn active" id="loginBtn">Login</button>
+            <button class="toggle-btn" id="signupBtn">Sign Up</button>
+          </div>
+
+          <div class="form-container login-form">
+            <form>
+              <h2>Welcome Back</h2>
+              <div class="input-group">
+                <label for="" id="user-id-err"></label>
+                <input type="text" placeholder="Email or Username" id="user-email--username" required>
+              </div>
+              <div class="input-group">
+                <label for="" id="user-pass-err"></label>
+                <input type="password" placeholder="Password" id="user-password" required>
+              </div>
+              <button type="submit" class="btn" id="user-login">Login</button>
+              <div class="forgot-password">
+                <a href="#" id="logout">Logout</a>
+
+                <a href="#">Forgot password?</a>
+              </div>
+              <div class="social-login">
+                <p>or continue with</p>
+                <div class="social-icons">
+                  <div class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                  </div>
+                  <div class="social-icon">
+                    <i class="fa-brands fa-google"></i>
+                  </div>
+                  <div class="social-icon">
+                    <i class="fa-brands fa-google-play"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-container signup-form">
+            <form>
+              <h2>Create Account</h2>
+              <div class="input-group">
+                <label for="" id="userName-err"></label>
+                <input type="text" placeholder="Full Name" id="userName" required>
+              </div>
+              <div class="input-group">
+                <label for="" id="userEmail-err"></label>
+                <input type="email" placeholder="Email Address" id="userEmail" required>
+              </div>
+              <div class="input-group">
+                <label for="" id="userPassword-err"></label>
+                <input type="password" placeholder="Password" id="userPassword" required>
+              </div>
+
+              <button type="submit" class="btn" id="signup-submit--btn">Sign Up</button>
+              <div class="social-login">
+                <p>or sign up with</p>
+                <div class="social-icons">
+                  <div class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                  </div>
+                  <div class="social-icon">
+                    <i class="fa-brands fa-google"></i>
+                  </div>
+                  <div class="social-icon">
+                    <i class="fa-brands fa-google-play"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="paymentSuccessNone">
+    <div class="success-container">
+      <div class="checkmark-circle">
+        <div class="checkmark">✓</div>
+      </div>
+      <h1>Payment Successful!</h1>
+      <p>Thank you for your purchase. Your order has been confirmed and will be processed shortly.</p>
+
+      <div class="order-details">
+        <div class="detail-row">
+          <span class="detail-label">Order Number:</span>
+          <span class="detail-value" id="order-number">#123456</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Date:</span>
+          <span class="detail-value" id="order-date">June 15, 2023</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Payment Method:</span>
+          <span class="detail-value" id="payment-method">Credit Card</span>
+        </div>
+        <div class="detail-row total">
+          <span class="detail-label">Total Paid:</span>
+          <span class="detail-value" id="total-amount">$129.99</span>
+        </div>
+      </div>
+
+      <!-- <div class="buttons">
                 <button class="btn" onclick="continueShopping()">Continue Shopping</button>
                 <button class="btn btn-outline" onclick="viewOrder()">View Order</button>
             </div> -->
-        </div>
-
     </div>
-    <script type="module" src="./src/main.js"></script>
+
+  </div>
+
+
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
