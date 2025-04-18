@@ -24,25 +24,30 @@ export const OrderDetail = async (id) => {
   console.log(localStorageItem);
 
   matchedObjects.forEach((element) => {
+
+
+    const localItem = localStorageItem.find(item => item.cartId === element.id);
+    const quantity = localItem ? localItem.itemQuantity : 1;
+
     let basePrice = Math.floor(element.originalPrice * (1 - element.discount / 100));
     let taxRate = 9; // percent
     let cgst = Math.floor((basePrice * taxRate) / 100);
     let sgst = Math.floor((basePrice * taxRate) / 100);
     let delivery = 50;
 
-    let totalPrice = basePrice + cgst + sgst;
+    let totalPrice = (basePrice * quantity);
 
     // Set current date
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     const today = new Date();
-    let currentDate= today.toLocaleDateString(undefined, options);
+    let currentDate = today.toLocaleDateString(undefined, options);
 
     //set Delivere Date 
     // Set current date + 4 days
-const Doptions = { year: 'numeric', month: 'long', day: 'numeric' };
-const Dtoday = new Date();
-Dtoday.setDate(Dtoday.getDate() + 4);
-let delivereDate = Dtoday.toLocaleDateString(undefined, Doptions);
+    const Doptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const Dtoday = new Date();
+    Dtoday.setDate(Dtoday.getDate() + 4);
+    let delivereDate = Dtoday.toLocaleDateString(undefined, Doptions);
 
     orderBox.innerHTML += `
      <div class="order-header">
@@ -65,8 +70,8 @@ let delivereDate = Dtoday.toLocaleDateString(undefined, Doptions);
       
       <div class="order-content">
         <div class="product-image-container">
-          <img src="${element.mainImage}" class="product-image" alt="Smartphone XYZ">
-          <div class="quantity-badge">1</div>
+          <img src="${element.mainImage}" class="product-image" alt="image">
+          <div class="quantity-badge">${quantity}</div>
         </div>
         
         <div class="product-details">
@@ -86,7 +91,8 @@ let delivereDate = Dtoday.toLocaleDateString(undefined, Doptions);
       </div>
       
       <div class="order-footer">
-        <div class="total-amount">Total Price: ₹${totalPrice} + delivery Charges ₹50 </div>
+        <div class="total-sub-amount"> <strong>Price:</strong> ₹${totalPrice} + <strong>CGST:</strong> ${cgst} + <strong>SGST:</strong> ${sgst} + <strong>delivery Charges:</strong> ₹50 </div>
+        <div class="total-amount">Total Price : <span class="total-price--count"> ₹${totalPrice + cgst + sgst + delivery} </span></div>
       </div>`
   })
 
